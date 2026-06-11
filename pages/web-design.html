@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Design & Development – Rimba Creative Media | Kigali</title>
+<meta name="description" content="Custom website design and development services in Kigali. Fast, mobile-responsive websites that convert visitors into customers. Book your web design consultation today.">
+<meta name="keywords" content="Website Design Kigali, Web Development, Custom Websites, Responsive Web Design, Website Booking, E-commerce, Landing Pages, Web Solutions">
+<link rel="icon" type="image/png" href="../images/rimba-favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles/style.css">
+<style>
+  .page-hero {
+    background: linear-gradient(135deg, rgba(0,0,0,.95), rgba(10,10,10,.75));
+    padding: 8rem 3rem 5rem;
+    text-align: center;
+    color: var(--white);
+    margin-top: 80px;
+  }
+  .page-hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+  }
+  .page-hero p {
+    max-width: 760px;
+    margin: 0 auto;
+    color: rgba(245,242,238,.8);
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+  .web-grid,
+  .process-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  .web-card,
+  .process-card {
+    background: var(--white);
+    border: 1px solid var(--light-gray);
+    border-radius: 4px;
+    padding: 2rem;
+    transition: transform .3s ease, border-color .3s ease;
+  }
+  .web-card:hover,
+  .process-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--gold);
+  }
+  .web-card h3,
+  .process-card h3 {
+    margin-top: 0;
+    color: var(--black);
+  }
+  .web-card p,
+  .process-card p {
+    color: var(--gray);
+    line-height: 1.75;
+  }
+  .data-panel {
+    background: var(--black);
+    color: var(--white);
+    padding: 3rem;
+    border-radius: 4px;
+    text-align: center;
+  }
+  .data-panel h2 {
+    margin: 0 0 1rem;
+  }
+  .data-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  .data-point {
+    background: rgba(255,255,255,.05);
+    padding: 1.3rem;
+    border-radius: 4px;
+    border: 1px solid rgba(255,255,255,.08);
+  }
+  .data-point h3 {
+    margin: 0;
+    color: var(--gold);
+    font-size: 2rem;
+  }
+  .data-point p {
+    margin: .5rem 0 0;
+    color: rgba(245,242,238,.75);
+    font-size: .9rem;
+  }
+  @media (max-width: 768px) {
+    .page-hero { padding: 6rem 2rem 4rem; }
+    .page-hero h1 { font-size: 2.8rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="index.html" class="logo">
+    <div class="logo-circle"></div>
+    <div>
+      <div class="logo-text">Rimba Creative</div>
+      <span class="logo-sub">Media</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="../index.html#home">Home</a></li>
+    <li><a href="digital-marketing.html">Digital Marketing</a></li>
+    <li><a href="web-design.html">Website Design</a></li>
+    <li><a href="classes.html">Classes</a></li>
+    <li><a href="../index.html#book-studio">Book Studio</a></li>
+    <li><a href="blog.html">Blog Posts</a></li>
+    <li><a href="../index.html#about">About Us</a></li>
+    <li><a href="../index.html#contact">Contact Us</a></li>
+  </ul>
+  <button class="hamburger" id="menuBtn" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="menuClose">✕</button>
+  <a href="../index.html#home" onclick="closeMobile()">Home</a>
+  <a href="digital-marketing.html" onclick="closeMobile()">Digital Marketing</a>
+  <a href="web-design.html" onclick="closeMobile()">Website Design</a>
+  <a href="classes.html" onclick="closeMobile()">Classes</a>
+  <a href="../index.html#book-studio" onclick="closeMobile()">Book Studio</a>
+  <a href="blog.html" onclick="closeMobile()">Blog Posts</a>
+  <a href="../index.html#about" onclick="closeMobile()">About Us</a>
+  <a href="../index.html#contact" onclick="closeMobile()">Contact Us</a>
+</div>
+
+<section class="page-hero">
+  <div class="container">
+    <p class="section-label">Website Design Services</p>
+    <h1>Custom Website Design & Development in Kigali</h1>
+    <p>Rimba Creative Media builds fast, beautiful, mobile-responsive websites that help your business get found online and convert visitors into customers. Book your website consultation today.</p>
+    <div class="hero-btns">
+      <a href="../index.html#contact" class="btn-primary">Book a Consultation</a>
+      <a href="portfolio.html" class="btn-outline">See Our Work</a>
+    </div>
+  </div>
+</section>
+
+<section style="padding: 4rem 3rem; background: var(--cream);">
+  <div class="container">
+    <p class="section-label">Website Solutions</p>
+    <h2 class="section-title">Professional Website Design That Works</h2>
+    <p class="section-desc">We build custom websites for businesses in Kigali. From small business sites to e-commerce platforms, every website is designed for speed, mobile responsiveness, and customer conversions.</p>
+    <p class="section-desc">Our website design services include SEO optimization, fast loading times, mobile-first design, and integration with your business tools and payment systems.</p>
+    <div class="web-grid">
+      <div class="web-card">
+        <h3>Business Websites</h3>
+        <p>Professional business websites that showcase your services, build credibility, and help customers find you on Google with SEO-optimized design.</p>
+      </div>
+      <div class="web-card">
+        <h3>E-Commerce Stores</h3>
+        <p>Fully functional online stores with payment processing, inventory management, and customer accounts. Sell online and grow your business 24/7.</p>
+      </div>
+      <div class="web-card">
+        <h3>Landing Pages</h3>
+        <p>High-converting landing pages designed to capture leads, promote campaigns, or drive sales. Every element is optimized for results.</p>
+      </div>
+      <div class="web-card">
+        <h3>Portfolio & Creative Sites</h3>
+        <p>Beautiful portfolio websites for designers, photographers, creatives, and agencies to showcase work and attract clients.</p>
+      </div>
+      <div class="web-card">
+        <h3>Responsive Mobile Design</h3>
+        <p>All our websites are built mobile-first and fully responsive. Your site looks perfect on phones, tablets, and desktops.</p>
+      </div>
+      <div class="web-card">
+        <h3>Fast & SEO-Ready</h3>
+        <p>Fast-loading websites optimized for search engines. We focus on performance, accessibility, and rankings so customers can find you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding: 4rem 3rem;">
+  <div class="container">
+    <div class="data-panel">
+      <h2>Websites That Convert</h2>
+      <p>We build websites designed to get results — more visitors, more leads, more sales for your Kigali business.</p>
+      <div class="data-grid">
+        <div class="data-point">
+          <h3>90%+</h3>
+          <p>Mobile-optimized load speed</p>
+        </div>
+        <div class="data-point">
+          <h3>100%</h3>
+          <p>Mobile responsive design</p>
+        </div>
+        <div class="data-point">
+          <h3>2-4 weeks</h3>
+          <p>Typical project timeline</p>
+        </div>
+        <div class="data-point">
+          <h3>24/7</h3>
+          <p>Website uptime guarantee</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding: 4rem 3rem; background: var(--cream);">
+  <div class="container">
+    <p class="section-label">How It Works</p>
+    <h2 class="section-title">Website Design Process</h2>
+    <p class="section-desc">We follow a proven process to create websites that work. From discovery to launch, every step is designed for your success.</p>
+    <div class="process-grid">
+      <div class="process-card">
+        <h3>1. Discovery & Planning</h3>
+        <p>We learn about your business, goals, target audience, and competition. Then we create a detailed website plan and design mockup.</p>
+      </div>
+      <div class="process-card">
+        <h3>2. Design & Wireframes</h3>
+        <p>Beautiful, functional design that matches your brand. We create mockups for desktop, tablet, and mobile so you see exactly what you're getting.</p>
+      </div>
+      <div class="process-card">
+        <h3>3. Development & Build</h3>
+        <p>We code your website using the latest technologies for speed, security, and SEO. Every line of code is tested and optimized.</p>
+      </div>
+      <div class="process-card">
+        <h3>4. Testing & Launch</h3>
+        <p>Thorough testing on all browsers and devices. We then deploy your site to a fast, secure server and optimize it for search engines.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding: 4rem 3rem; background: var(--black); color: var(--white);">
+  <div class="container">
+    <h2 class="section-title" style="color: var(--white);">Ready for a website that works?</h2>
+    <p class="section-desc" style="color: rgba(245,242,238,.75);">Book a free website consultation with Rimba Creative Media. Let's discuss your project, timeline, and budget. We'll help you build a website that helps your business grow.</p>
+    <div style="margin-top: 2rem; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+      <a href="../index.html#contact" class="btn-primary">Book Now</a>
+      <a href="portfolio.html" class="btn-outline">View Examples</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER - Same as index.html -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo-circle"></div>
+      <div class="logo-text" style="color:var(--white);margin-top:.5rem">Rimba Creative Media</div>
+      <p>Creating powerful visuals and building creative skills in Kigali, Rwanda. Let's make something great together.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="digital-marketing.html">Digital Marketing</a></li>
+        <li><a href="web-design.html">Website Design</a></li>
+        <li><a href="../index.html#book-studio">Studio Shoot</a></li>
+        <li><a href="blog.html">Blog & Resources</a></li>
+        <li><a href="../index.html#contact">Get a Quote</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Classes</h4>
+      <ul>
+        <li><a href="classes.html">Video Production</a></li>
+        <li><a href="classes.html">Photography</a></li>
+        <li><a href="classes.html">Web Development</a></li>
+        <li><a href="classes.html">Certificates</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li>KIGALI, RWANDA</li>
+        <li>KG 440 ST</li>
+        <li><a href="tel:+250786134003">+250 786 134 003</a></li>
+        <li><a href="mailto:rimbacreativemedia@gmail.com">rimbacreativemedia@gmail.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>@2026 Rimba Creative Media. All Rights Reserved.</p>
+    <div class="socials">
+      <a href="https://www.tiktok.com/@rimbacreatives" target="_blank" class="social-btn" title="TikTok">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/rimbacreatives/" target="_blank" class="social-btn" title="Instagram">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+      </a>
+      <a href="https://www.youtube.com/@RimbaCreativeMedia" target="_blank"   class="social-btn" title="YouTube">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu toggle
+  document.getElementById('menuBtn').addEventListener('click', () => {
+    document.getElementById('mobileMenu').classList.add('open');
+  });
+  document.getElementById('menuClose').addEventListener('click', closeMobile);
+  function closeMobile() {
+    document.getElementById('mobileMenu').classList.remove('open');
+  }
+</script>
+
+</body>
+</html>
+

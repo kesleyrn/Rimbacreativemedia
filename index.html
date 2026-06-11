@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rimba Creative Media – Create Creative Visuals</title>
+<link rel="icon" type="image/png" href="images/rimba-favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+ 
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#home" class="logo">
+    <div class="logo-circle"></div>
+    <div>
+      <div class="logo-text">Rimba Creative</div>
+      <span class="logo-sub">Media</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="pages/digital-marketing.html">Digital Marketing</a></li>
+    <li><a href="pages/classes.html">Classes</a></li>
+    <li><a href="#book-studio">Book Studio</a></li>
+    <li><a href="pages/blog.html">Blog Posts</a></li>
+    <li><a href="#about">About Us</a></li>
+    <li><a href="#contact">Contact Us</a></li>
+  </ul>
+  <button class="hamburger" id="menuBtn" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+ 
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="menuClose">✕</button>
+  <a href="#home" onclick="closeMobile()">Home</a>
+  <a href="pages/digital-marketing.html" onclick="closeMobile()">Digital Marketing</a>
+    <a href="web-design.html" onclick="closeMobile()">Website Design</a>
+  <a href="pages/classes.html" onclick="closeMobile()">Classes</a>
+  <a href="#book-studio" onclick="closeMobile()">Book Studio</a>
+  <a href="pages/blog.html" onclick="closeMobile()">Blog Posts</a>
+  <a href="#about" onclick="closeMobile()">About Us</a>
+  <a href="#contact" onclick="closeMobile()">Contact Us</a>
+</div>
+ 
+<!-- HERO -->
+<section id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-grain"></div>
+  <div class="hero-lines"></div>
+  <div class="hero-content">
+    <!-- <span class="hero-tag">📍 Kigali, Rwanda · Est. 2020</span> -->
+    <h1 class="hero-title">RIMBA<br><span class="gold">CREATIVE</span><br>MEDIA</h1>
+ 
+    <!-- Animated rotating tagline -->
+    <div class="hero-rotating-wrap">
+      <span class="hero-rotating-prefix">We help you </span>
+      <span class="hero-rotating-words">
+        <span class="rw rw-4">Create Creative Visuals</span>
+        <span class="rw rw-1">Grow your brand online</span>
+        <span class="rw rw-2">Shoot stunning visuals</span>
+        <span class="rw rw-3">Learn real creative skills</span>
+      </span>
+    </div>
+ 
+    <div class="hero-btns hero-btns-row">
+      <a href="#classes" class="btn-primary">Join a Class</a>
+      <a href="#digital-marketing" class="btn-outline">Our Services</a>
+      <a href="#book-studio" class="btn-outline">Book Studio</a>
+    </div>
+  </div>
+  <div class="hero-scroll">Scroll</div>
+</section>
+ 
+<!-- DIGITAL MARKETING -->
+<section id="digital-marketing">
+  <div class="container">
+    <p class="section-label">What We Do</p>
+    <h2 class="section-title">Digital Marketing</h2>
+    <p class="section-desc">We help your business grow online. From social media to content creation, we make sure your brand stands out and reaches the right people.</p>
+    <div class="services-grid">
+      <a href="pages/digital-marketing.html" class="service-card service-card-link">
+        <div class="service-icon">📱</div>
+        <h3>Social Media Management</h3>
+        <p>We manage your Instagram, Facebook, TikTok, and more — creating content that connects with your audience and grows your following every month.</p>
+        <span class="svc-link-cta">View Our Work →</span>
+      </a>
+      <div class="service-card">
+        <div class="service-icon">🎬</div>
+        <h3>Video Production</h3>
+        <p>Professional video ads, brand films, and reels that tell your story clearly and powerfully — shot in our studio or at your location.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📸</div>
+        <h3>Photography</h3>
+        <p>Product, portrait, corporate, and event photography that makes your brand look its very best across all platforms and print materials.</p>
+        <a href="pages/portfolio.html" style="display:inline-block;margin-top:1rem;font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:2px;color:var(--gold);text-decoration:none;text-transform:uppercase;border-bottom:1px solid rgba(201,168,76,.3);padding-bottom:2px;">View Our Work →</a>
+      </div>
+      <a href="pages/web-design.html" class="service-card service-card-link">
+        <div class="service-icon">🌐</div>
+        <h3>Website Design</h3>
+        <p>Clean, fast, and mobile-friendly websites that represent your brand professionally and turn visitors into real customers.</p>
+        <span class="svc-link-cta">View Our Work →</span>
+      </a>
+      <a href="pages/digital-marketing.html" class="service-card service-card-link">
+        <div class="service-icon">📊</div>
+        <h3>Content Strategy</h3>
+        <p>We plan what to post, when to post, and how to say it — so your message is always clear, consistent, and effective.</p>
+        <span class="svc-link-cta">View Our Work →</span>
+      </a>
+      <a href="pages/digital-marketing.html" class="service-card service-card-link">
+        <div class="service-icon">🎯</div>
+        <h3>Paid Advertising</h3>
+        <p>Targeted ad campaigns on Google, Facebook and Instagram that bring real results — more clicks, more leads, more sales.</p>
+        <span class="svc-link-cta">View Our Work →</span>
+      </a>
+    </div>
+  </div>
+</section>
+ 
+<!-- CLASSES -->
+<section id="classes">
+  <div class="container">
+    <p class="section-label">Learn With Us</p>
+    <h2 class="section-title">Our Classes</h2>
+    <p class="section-desc" style="color:rgba(245,242,238,.55)">Practical 3-month courses taught in Kigali. No experience needed — just show up ready to learn. Every student gets a certificate when they finish.</p>
+    <div class="classes-grid">
+      <a href="pages/classes.html" style="text-decoration: none; color: inherit;">
+        <div class="class-card" style="cursor: pointer;">
+          <div class="class-number">01</div>
+          <h3>Photography &amp; Videography</h3>
+          <p>One complete course covering both photo and video. You'll learn camera operation, studio lighting, composition, and editing — so you can shoot professional photos AND videos by the end of 3 months.</p>
+          <ul class="class-topics">
+            <li>📷 Camera settings &amp; composition</li>
+            <li>💡 Studio &amp; natural lighting</li>
+            <li>🎬 Video shooting &amp; directing</li>
+            <li>✂️ Photo &amp; video editing</li>
+          </ul>
+          <span class="class-duration">3 Months · Certificate Included</span>
+        </div>
+      </a>
+      <a href="pages/classes.html" style="text-decoration: none; color: inherit;">
+        <div class="class-card" style="cursor: pointer;">
+          <div class="class-number">02</div>
+          <h3>Web Development</h3>
+          <p>Build real websites from scratch. This hands-on course teaches you HTML, CSS, and JavaScript step by step — so you finish with actual projects in your portfolio and skills clients will pay for.</p>
+          <ul class="class-topics">
+            <li>🌐 HTML &amp; CSS foundations</li>
+            <li>⚡ JavaScript &amp; interactivity</li>
+            <li>📱 Responsive &amp; mobile design</li>
+            <li>🚀 Launch your own website</li>
+          </ul>
+          <span class="class-duration">3 Months · Certificate Included</span>
+        </div>
+      </a>
+    </div>
+    <div class="cert-badge">
+      <div class="cert-icon">🎓</div>
+      <div class="cert-text">
+        <h4>Official Certificate Upon Completion</h4>
+        <p>Every student who finishes a course receives an official Rimba Creative Media certificate — a real credential you can use to find work or start your own business.</p>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- BOOK STUDIO -->
+<section id="book-studio">
+  <div class="container">
+    <div class="studio-inner">
+      <div>
+        <p class="section-label">Kigali Studio</p>
+        <h2 class="section-title">Book a Studio Shoot</h2>
+        <p class="section-desc">Our professional studio in Kigali is available for photographers, videographers, content creators, and businesses. Whether you need a clean backdrop or a full production setup, we've got you covered.</p>
+        <div class="studio-features">
+          <div class="studio-feature">
+            <div class="studio-feature-icon">🟩</div>
+            <div>
+              <h4>Green Screen Studio</h4>
+              <p>Full green screen setup ideal for video productions, YouTube content, and virtual backgrounds.</p>
+            </div>
+          </div>
+          <div class="studio-feature">
+            <div class="studio-feature-icon">💡</div>
+            <div>
+              <h4>Professional Lighting</h4>
+              <p>Studio-grade lights, softboxes, and modifiers ready to use for any shoot style.</p>
+            </div>
+          </div>
+          <div class="studio-feature">
+            <div class="studio-feature-icon">🎥</div>
+            <div>
+              <h4>Equipment Available</h4>
+              <p>Cameras, lenses, tripods, and audio gear available for hire during your session.</p>
+            </div>
+          </div>
+          <div class="studio-feature">
+            <div class="studio-feature-icon">📍</div>
+            <div>
+              <h4>Located in Kigali</h4>
+              <p>KG 440 Street, Kigali — easy to reach, with space for your whole team.</p>
+            </div>
+          </div>
+        </div>
+        <br>
+        <a href="#contact" class="btn-primary">Book Now</a>
+      </div>
+      <div class="studio-visual">
+        <div class="studio-visual-inner">
+          <span>🎬</span>
+          <h3>Studio Ready</h3>
+          <p>Book your session today</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- PORTFOLIO PREVIEW -->
+<section id="portfolio-preview" style="background:var(--black);padding:6rem 3rem;">
+  <div class="container">
+    <p class="section-label" style="color:var(--gold)">Our Work</p>
+    <h2 class="section-title" style="color:var(--white)">Portfolio</h2>
+    <p class="section-desc" style="color:rgba(245,242,238,.55);margin-bottom:3rem;">A glimpse of the work we love doing. From intimate studio sessions to outdoor adventures and unforgettable events — every frame tells a story.</p>
+ 
+    <!-- Category cards -->
+    <div class="portfolio-preview-grid">
+      <a href="pages/portfolio.html?cat=studio" class="portfolio-cat-card">
+        <div class="pcat-bg pcat-studio" style="background-image:url('images/portfolio-studio.svg');background-size:cover;background-position:center;"></div>
+        <div class="pcat-overlay"></div>
+        <div class="pcat-content">
+          <span class="pcat-icon">🎬</span>
+          <h3>Studio Photos</h3>
+          <p>Professional studio sessions with perfect lighting & backdrops</p>
+          <span class="pcat-cta">View Gallery →</span>
+        </div>
+      </a>
+      <a href="pages/portfolio.html?cat=outdoor" class="portfolio-cat-card">
+        <div class="pcat-bg pcat-outdoor" style="background-image:url('images/portfolio-outdoor.svg');background-size:cover;background-position:center top;"></div>
+        <div class="pcat-overlay"></div>
+        <div class="pcat-content">
+          <span class="pcat-icon">🌿</span>
+          <h3>Outdoor Photos</h3>
+          <p>Natural light portraits and location shoots across Kigali & beyond</p>
+          <span class="pcat-cta">View Gallery →</span>
+        </div>
+      </a>
+      <a href="pages/portfolio.html?cat=events" class="portfolio-cat-card">
+        <div class="pcat-bg pcat-events pcat-events-cover"></div>
+        <div class="pcat-overlay"></div>
+        <div class="pcat-content">
+          <span class="pcat-icon">💒</span>
+          <h3>Events & Weddings</h3>
+          <p>Weddings, celebrations & corporate events captured beautifully</p>
+          <span class="pcat-cta">View Gallery →</span>
+        </div>
+      </a>
+    </div>
+ 
+    <div style="text-align:center;margin-top:3rem;">
+      <a href="pages/portfolio.html" class="btn-primary">See Full Portfolio</a>
+    </div>
+  </div>
+</section>
+ 
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <p class="section-label">Who We Are</p>
+    <h2 class="section-title" style="color:var(--white)">About Rimba Creative Media</h2>
+    <div class="about-inner">
+      <div class="about-stats">
+        <div class="stat">
+          <div class="stat-num">3+</div>
+          <div class="stat-label">Years Active</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">100+</div>
+          <div class="stat-label">Happy Clients</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">3</div>
+          <div class="stat-label">Courses Offered</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">KGL</div>
+          <div class="stat-label">Based in Kigali</div>
+        </div>
+      </div>
+      <div class="about-text">
+        <p>Rimba Creative Media is a creative agency based in Kigali, Rwanda. We help individuals and businesses create powerful visual content that gets noticed — from brand photography and video production to full digital marketing campaigns.</p>
+        <p>We also run a training school where we teach the next generation of creatives. Our 3-month courses in photography, video production, and web development are practical, affordable, and taught by people who do this work every day.</p>
+        <p>Whether you need us to market your business, shoot your event, or teach your team — we're here for it. Come work with us.</p>
+        <div class="about-values">
+          <h3>Our Values</h3>
+          <ul class="value-list">
+            <li>Quality over quantity — we care about doing things right</li>
+            <li>Creativity — we bring fresh ideas to every project</li>
+            <li>Community — we invest in Kigali's creative industry</li>
+            <li>Growth — we help clients and students move forward</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <p class="section-label">Get In Touch</p>
+    <h2 class="section-title">Let's Work Together</h2>
+    <div class="contact-inner">
+      <!-- Left info -->
+      <div class="contact-info">
+        <h3>Gain a Leading Voice in Your Industry.<br>Talk to Us.</h3>
+        <p>Have a project in mind? Want to book the studio? Interested in our classes? Send us a message and we'll get back to you quickly.</p>
+        <div class="contact-details">
+          <div class="contact-detail">
+            <div class="contact-detail-icon">📍</div>
+            <div class="contact-detail-text">
+              <h4>Location</h4>
+              <p>Kigali, Rwanda<br>KG 440 Street, Kigali</p>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">📞</div>
+            <div class="contact-detail-text">
+              <h4>Phone</h4>
+              <a href="tel:+250786134003">+250 786 134 003</a>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">✉️</div>
+            <div class="contact-detail-text">
+              <h4>Email</h4>
+              <a href="mailto:rimbacreativemedia@gmail.com">rimbacreativemedia@gmail.com</a>
+            </div>
+          </div>
+        </div>
+        <div class="socials">
+          <a href="https://www.tiktok.com/@rimbacreatives" target="_blank" class="social-btn" title="TikTok">
+            <!-- TikTok SVG -->
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/rimbacreatives/" target="_blank" class="social-btn" title="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/@RimbaCreativeMedia" target="_blank" class="social-btn" title="YouTube">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+          </a>
+        </div>
+      </div>
+ 
+      <!-- Right form -->
+      <div class="contact-form-wrap">
+        <h3>Let's Get In Touch</h3>
+        <p class="form-sub">Send us a message and let's create something great together!</p>
+        <div id="formSuccess" class="form-success">
+          <span>✅</span>
+          Message sent! We'll get back to you soon.
+        </div>
+        <div id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Your Name</label>
+              <input type="text" id="fname" placeholder="e.g. Jean Pierre" />
+            </div>
+            <div class="form-group">
+              <label>Your Email</label>
+              <input type="email" id="femail" placeholder="your@email.com" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Phone Number (optional)</label>
+            <input type="tel" id="fphone" placeholder="+250 7XX XXX XXX" />
+          </div>
+          <div class="form-group">
+            <label>What are you interested in?</label>
+            <select id="fservice">
+              <option value="">— Select a service —</option>
+              <option>Digital Marketing</option>
+              <option>Photography Classes</option>
+              <option>Video Production Classes</option>
+              <option>Web Development Classes</option>
+              <option>Book Studio Shoot</option>
+              <option>Blog Features</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea id="fmessage" placeholder="Tell us a bit about your project or question…"></textarea>
+          </div>
+          <button class="btn-send" onclick="sendForm()">
+            <span>⊕</span> Send Message
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo-circle"></div>
+      <div class="logo-text" style="color:var(--white);margin-top:.5rem">Rimba Creative Media</div>
+      <p>Creating powerful visuals and building creative skills in Kigali, Rwanda. Let's make something great together.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="pages/digital-marketing.html">Digital Marketing</a></li>
+        <li><a href="pages/web-design.html">Website Design</a></li>
+        <li><a href="#book-studio">Studio Shoot</a></li>
+        <li><a href="pages/blog.html">Blog & Resources</a></li>
+        <li><a href="#contact">Get a Quote</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Classes</h4>
+      <ul>
+        <li><a href="pages/classes.html">Video Production</a></li>
+        <li><a href="pages/classes.html">Photography</a></li>
+        <li><a href="pages/classes.html">Web Development</a></li>
+        <li><a href="pages/classes.html">Certificates</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li>KIGALI, RWANDA</li>
+        <li>KG 440 ST</li>
+        <li><a href="tel:+250786134003">+250 786 134 003</a></li>
+        <li><a href="mailto:rimbacreativemedia@gmail.com">rimbacreativemedia@gmail.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>@2026 Rimba Creative Media. All Rights Reserved.</p>
+    <div class="socials">
+      <a href="https://www.tiktok.com/@rimbacreatives" target="_blank" class="social-btn" title="TikTok">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/rimbacreatives/" target="_blank" class="social-btn" title="Instagram">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+      </a>
+      <a href="https://www.youtube.com/@RimbaCreativeMedia" target="_blank" class="social-btn" title="YouTube"> 
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+ 
+<!-- WhatsApp Float -->
+<a href="https://wa.me/250786134003" class="whatsapp-float" target="_blank">
+  <span class="wa-icon">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+  </span>
+  Need Help? Chat with us
+</a>
+ 
+<!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  // Rotating hero words
+  const words = document.querySelectorAll('.rw');
+  let current = 0;
+  words[0].classList.add('active');
+  setInterval(() => {
+    words[current].classList.remove('active');
+    current = (current + 1) % words.length;
+    words[current].classList.add('active');
+  }, 2600);
+ 
+  // Hamburger menu
+  document.getElementById('menuBtn').addEventListener('click', () => {
+    document.getElementById('mobileMenu').classList.add('open');
+  });
+  document.getElementById('menuClose').addEventListener('click', closeMobile);
+  function closeMobile() {
+    document.getElementById('mobileMenu').classList.remove('open');
+  }
+ 
+  // Navbar scroll shadow
+  window.addEventListener('scroll', () => {
+    const nav = document.getElementById('navbar');
+    nav.style.boxShadow = window.scrollY > 30 ? '0 2px 20px rgba(0,0,0,.08)' : 'none';
+  });
+ 
+  // ── EmailJS Configuration ──────────────────────────────────────────────────
+  // Replace the three placeholder values below with your real keys from emailjs.com
+  const EMAILJS_PUBLIC_KEY  = 'whKxERJQKeGkEQviz';
+  const EMAILJS_SERVICE_ID  = 'service_03sk86j';
+  const EMAILJS_TEMPLATE_ID = 'template_qshtbhw';
+  // ───────────────────────────────────────────────────────────────────────────
+ 
+  emailjs.init(EMAILJS_PUBLIC_KEY);
+ 
+  // Contact form
+  function sendForm() {
+    const name    = document.getElementById('fname').value.trim();
+    const email   = document.getElementById('femail').value.trim();
+    const phone   = document.getElementById('fphone').value.trim();
+    const service = document.getElementById('fservice').value;
+    const message = document.getElementById('fmessage').value.trim();
+    const sendBtn = document.querySelector('.btn-send');
+ 
+    if (!name || !email || !message) {
+      alert('Please fill in your name, email, and message before sending.');
+      return;
+    }
+    if (!/\S+@\S+\.\S+/.test(email)) {
+      alert('Please enter a valid email address.');
+      return;
+    }
+ 
+    // Disable button while sending
+    sendBtn.disabled = true;
+    sendBtn.textContent = 'Sending…';
+ 
+    const templateParams = {
+      title:   `New enquiry from ${name}`,
+      name:    name,
+      email:   email,
+      phone:   phone || 'Not provided',
+      service: service || 'Not specified',
+      message: message,
+    };
+ 
+    emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
+      .then(() => {
+        document.getElementById('contactForm').style.display = 'none';
+        document.getElementById('formSuccess').style.display = 'block';
+      })
+      .catch((error) => {
+        console.error('EmailJS error:', error);
+        alert('Oops! Something went wrong. Please try again or email us directly at rimbacreativemedia@gmail.com');
+        sendBtn.disabled = false;
+        sendBtn.innerHTML = '<span>⊕</span> Send Message';
+      });
+  }
+ 
+  // Smooth reveal on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+ 
+  document.querySelectorAll('.service-card, .class-card, .event-card, .stat, .studio-feature').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity .5s ease, transform .5s ease';
+    observer.observe(el);
+  });
+</script>
+</body>
+</html>

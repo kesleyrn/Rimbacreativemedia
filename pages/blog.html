@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog & Insights – Rimba Creative Media</title>
+<link rel="icon" type="image/png" href="../images/rimba-favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles/style.css">
+<style>
+  /* Blog specific styles */
+  .blog-hero {
+    background: linear-gradient(135deg, var(--black) 0%, rgba(10,10,10,.8) 100%);
+    padding: 8rem 3rem 5rem;
+    margin-top: 80px;
+    text-align: center;
+  }
+
+  .blog-hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+    color: var(--white);
+    margin-bottom: 1rem;
+  }
+
+  .blog-hero p {
+    font-size: 1.1rem;
+    color: rgba(245,242,238,.7);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .blog-card {
+    background: var(--white);
+    border: 1px solid var(--light-gray);
+    border-radius: 4px;
+    overflow: hidden;
+    transition: all .3s ease;
+    cursor: pointer;
+  }
+
+  .blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,.1);
+    border-color: var(--gold);
+  }
+
+  .blog-card-image {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+  }
+
+  .blog-card-content {
+    padding: 2rem;
+  }
+
+  .blog-date {
+    font-family: 'Space Mono', monospace;
+    font-size: .75rem;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: .5rem;
+  }
+
+  .blog-card-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--black);
+    margin-bottom: .5rem;
+    line-height: 1.4;
+  }
+
+  .blog-card-desc {
+    color: var(--gray);
+    font-size: .95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .blog-card-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid var(--cream);
+  }
+
+  .blog-category {
+    display: inline-block;
+    background: rgba(201,168,76,.1);
+    color: var(--gold);
+    padding: .3rem .7rem;
+    border-radius: 2px;
+    font-size: .75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .read-more {
+    color: var(--gold);
+    text-decoration: none;
+    font-family: 'Space Mono', monospace;
+    font-size: .8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all .2s;
+  }
+
+  .read-more:hover {
+    transform: translateX(3px);
+  }
+
+  .blog-featured {
+    grid-column: span 1;
+    background: var(--black);
+    color: var(--white);
+  }
+
+  .blog-featured .blog-card-image {
+    height: 250px;
+  }
+
+  .blog-featured .blog-card-title {
+    color: var(--white);
+    font-size: 1.5rem;
+  }
+
+  .blog-featured .blog-card-desc {
+    color: rgba(245,242,238,.8);
+  }
+
+  .blog-featured .blog-category {
+    background: rgba(201,168,76,.2);
+  }
+
+  @media (max-width: 768px) {
+    .blog-hero {
+      padding: 6rem 2rem 4rem;
+    }
+
+    .blog-hero h1 {
+      font-size: 2.5rem;
+    }
+
+    .blog-featured {
+      grid-column: span 1;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="index.html" class="logo">
+    <div class="logo-circle"></div>
+    <div>
+      <div class="logo-text">Rimba Creative</div>
+      <span class="logo-sub">Media</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="../index.html#home">Home</a></li>
+    <li><a href="digital-marketing.html">Digital Marketing</a></li>
+    <li><a href="classes.html">Classes</a></li>
+    <li><a href="../index.html#book-studio">Book Studio</a></li>
+    <li><a href="blog.html">Blog Posts</a></li>
+    <li><a href="../index.html#about">About Us</a></li>
+    <li><a href="../index.html#contact">Contact Us</a></li>
+  </ul>
+  <button class="hamburger" id="menuBtn" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="menuClose">✕</button>
+  <a href="../index.html#home" onclick="closeMobile()">Home</a>
+  <a href="digital-marketing.html" onclick="closeMobile()">Digital Marketing</a>
+  <a href="classes.html" onclick="closeMobile()">Classes</a>
+  <a href="../index.html#book-studio" onclick="closeMobile()">Book Studio</a>
+  <a href="blog.html" onclick="closeMobile()">Blog Posts</a>
+  <a href="../index.html#about" onclick="closeMobile()">About Us</a>
+  <a href="../index.html#contact" onclick="closeMobile()">Contact Us</a>
+</div>
+
+<!-- BLOG HERO -->
+<section class="blog-hero">
+  <h1>Blog & Insights</h1>
+  <p>Creative tips, marketing strategies, industry trends, and inspiring stories from the Rimba Creative Media team.</p>
+</section>
+
+<!-- BLOG GRID -->
+<section style="padding: 4rem 3rem; background: var(--white);">
+  <div class="container">
+    <div class="blog-grid">
+      <!-- Featured Post -->
+      <div class="blog-card blog-featured">
+        <div class="blog-card-image">📱</div>
+        <div class="blog-card-content">
+          <span class="blog-date">June 2026</span>
+          <h3 class="blog-card-title">How to Grow Your Instagram Following: 5 Strategies That Work</h3>
+          <p class="blog-card-desc">Social media growth doesn't happen by accident. Learn the proven strategies we use with our clients to build engaged audiences on Instagram, including content planning, posting consistency, and community engagement techniques that drive real results.</p>
+          <div class="blog-card-meta">
+            <span class="blog-category">Social Media</span>
+            <a href="#" class="read-more">Read More →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog Post 1 -->
+      <div class="blog-card">
+        <div class="blog-card-image">🎥</div>
+        <div class="blog-card-content">
+          <span class="blog-date">May 2026</span>
+          <h3 class="blog-card-title">The Power of Video Marketing in 2026</h3>
+          <p class="blog-card-desc">Video content is no longer optional — it's essential. Discover why video marketing converts better than any other format and how you can start creating videos that engage your audience.</p>
+          <div class="blog-card-meta">
+            <span class="blog-category">Video</span>
+            <a href="#" class="read-more">Read More →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog Post 2 -->
+      <div class="blog-card">
+        <div class="blog-card-image">📸</div>
+        <div class="blog-card-content">
+          <span class="blog-date">May 2026</span>
+          <h3 class="blog-card-title">Photography Tips for Small Business Owners</h3>
+          <p class="blog-card-desc">You don't need expensive equipment to take professional photos. Learn simple lighting, composition, and smartphone photography techniques that make your products and services look amazing.</p>
+          <div class="blog-card-meta">
+            <span class="blog-category">Photography</span>
+            <a href="#" class="read-more">Read More →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog Post 3 -->
+      <div class="blog-card">
+        <div class="blog-card-image">📊</div>
+        <div class="blog-card-content">
+          <span class="blog-date">April 2026</span>
+          <h3 class="blog-card-title">Content Strategy: Planning Your Marketing Calendar</h3>
+          <p class="blog-card-desc">Consistent content is key to building your brand online. We'll walk you through creating a content calendar that keeps your message aligned and your audience engaged throughout the year.</p>
+          <div class="blog-card-meta">
+            <span class="blog-category">Strategy</span>
+            <a href="#" class="read-more">Read More →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog Post 4 -->
+      <div class="blog-card">
+        <div class="blog-card-image">🎨</div>
+        <div class="blog-card-content">
+          <span class="blog-date">April 2026</span>
+          <h3 class="blog-card-title">Brand Identity 101: Creating a Visual Style That Works</h3>
+          <p class="blog-card-desc">Your visual brand is the first impression customers get. Learn how to choose colors, fonts, and imagery that communicate your brand values and stand out from the competition.</p>
+          <div class="blog-card-meta">
+            <span class="blog-category">Branding</span>
+            <a href="#" class="read-more">Read More →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog Post 5 -->
+      <div class="blog-card">
+        <div class="blog-card-image">💡</div>
+        <div class="blog-card-content">
+          <span class="blog-date">March 2026</span>
+          <h3 class="blog-card-title">Getting Started with Paid Advertising: A Beginner's Guide</h3>
+          <p class="blog-card-desc">Unsure about Google Ads or Facebook Ads? This guide breaks down the basics, explains targeting options, and shows you how to maximize your ad spend for real business results.</p>
+          <div class="blog-card-meta">
+            <span class="blog-category">Advertising</span>
+            <a href="#" class="read-more">Read More →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog Post 6 -->
+      <div class="blog-card">
+        <div class="blog-card-image">🌐</div>
+        <div class="blog-card-content">
+          <span class="blog-date">March 2026</span>
+          <h3 class="blog-card-title">Website Optimization: 5 Ways to Improve Your Site's Performance</h3>
+          <p class="blog-card-desc">A slow website loses customers. Learn the top speed and optimization techniques that improve user experience, boost SEO rankings, and increase conversion rates.</p>
+          <div class="blog-card-meta">
+            <span class="blog-category">Web Design</span>
+            <a href="#" class="read-more">Read More →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER CTA -->
+<section style="background: var(--black); padding: 4rem 3rem; text-align: center; margin-top: 3rem;">
+  <div class="container" style="max-width: 600px;">
+    <p style="font-family: 'Bebas Neue', sans-serif; font-size: 2rem; color: var(--white); letter-spacing: 1.5px; margin-bottom: 1rem;">STAY UPDATED</p>
+    <p style="color: rgba(245,242,238,.7); margin-bottom: 2rem;">Get creative tips, marketing insights, and exclusive offers delivered to your inbox. No spam, just good content.</p>
+    <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+      <input type="email" id="nlEmail" placeholder="your@email.com" style="flex: 1; padding: .8rem 1rem; border: 1px solid var(--light-gray); border-radius: 2px; font-family: 'DM Sans', sans-serif; font-size: .9rem;">
+      <button class="btn-primary" onclick="subscribeNewsletter()" style="padding: .8rem 2rem;">Subscribe</button>
+    </div>
+    <p style="font-size: .8rem; color: rgba(245,242,238,.5);">We respect your privacy. Unsubscribe at any time.</p>
+  </div>
+</section>
+
+<!-- BACK TO HOME -->
+<section style="padding: 3rem; text-align: center; background: var(--white);">
+  <a href="index.html" style="display: inline-block; font-family: 'Space Mono', monospace; font-size: .8rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold); padding-bottom: .3rem;">← Back to Home</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo-circle"></div>
+      <div class="logo-text" style="color:var(--white);margin-top:.5rem">Rimba Creative Media</div>
+      <p>Creating powerful visuals and building creative skills in Kigali, Rwanda. Let's make something great together.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="digital-marketing.html">Digital Marketing</a></li>
+        <li><a href="web-design.html">Website Design</a></li>
+        <li><a href="../index.html#book-studio">Studio Shoot</a></li>
+        <li><a href="blog.html">Blog & Resources</a></li>
+        <li><a href="../index.html#contact">Get a Quote</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Classes</h4>
+      <ul>
+        <li><a href="classes.html">Video Production</a></li>
+        <li><a href="classes.html">Photography</a></li>
+        <li><a href="classes.html">Web Development</a></li>
+        <li><a href="classes.html">Certificates</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li>KIGALI, RWANDA</li>
+        <li>KG 440 ST</li>
+        <li><a href="tel:+250786134003">+250 786 134 003</a></li>
+        <li><a href="mailto:rimbacreativemedia@gmail.com">rimbacreativemedia@gmail.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>@2026 Rimba Creative Media. All Rights Reserved.</p>
+    <div class="socials">
+      <a href="https://www.tiktok.com/@rimbacreatives" target="_blank"  class="social-btn" title="TikTok">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/rimbacreatives/" target="_blank"class="social-btn" title="Instagram">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+      </a>
+      <a href="https://www.youtube.com/@RimbaCreativeMedia" target="_blank"  class="social-btn" title="YouTube">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Hamburger menu
+  document.getElementById('menuBtn').addEventListener('click', () => {
+    document.getElementById('mobileMenu').classList.add('open');
+  });
+  document.getElementById('menuClose').addEventListener('click', closeMobile);
+  function closeMobile() {
+    document.getElementById('mobileMenu').classList.remove('open');
+  }
+
+  // Navbar scroll shadow
+  window.addEventListener('scroll', () => {
+    const nav = document.getElementById('navbar');
+    nav.style.boxShadow = window.scrollY > 30 ? '0 2px 20px rgba(0,0,0,.08)' : 'none';
+  });
+
+  function subscribeNewsletter() {
+    const email = document.getElementById('nlEmail').value.trim();
+    if (!email || !/\S+@\S+\.\S+/.test(email)) {
+      alert('Please enter a valid email address.');
+      return;
+    }
+    alert('Thank you for subscribing! Check your email for confirmation.');
+    document.getElementById('nlEmail').value = '';
+  }
+</script>
+</body>
+</html>
+
