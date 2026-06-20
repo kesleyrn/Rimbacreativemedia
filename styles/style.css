@@ -17,6 +17,7 @@ body {
   font-family: 'DM Sans', sans-serif;
   background: var(--white);
   color: var(--black);
+  line-height: 1.6;
   overflow-x: hidden;
 }
 
@@ -169,6 +170,7 @@ nav {
 .hero-btns-row { flex-wrap: nowrap; }
 .btn-primary {
   background: var(--gold);
+  border-radius: 8px;
   color: var(--black);
   padding: .85rem 2.2rem;
   font-weight: 700;
@@ -186,6 +188,7 @@ nav {
 }
 .btn-outline {
   background: transparent;
+  border-radius: 8px;
   color: var(--white);
   padding: .85rem 2.2rem;
   font-weight: 500;
@@ -347,6 +350,7 @@ section { padding: 6rem 3rem; }
 }
 .service-card {
   border: 1px solid var(--cream);
+  border-radius: 20px;
   padding: 2rem;
   transition: all .3s;
   position: relative;
@@ -387,6 +391,7 @@ section { padding: 6rem 3rem; }
 }
 .class-card {
   border: 1px solid rgba(245,242,238,.1);
+  border-radius: 15px;
   padding: 2.5rem;
   position: relative;
   overflow: hidden;
@@ -427,6 +432,7 @@ section { padding: 6rem 3rem; }
   border: 1px solid rgba(201,168,76,.3);
   padding: 1.5rem 2rem;
   max-width: 520px;
+  border-radius: 10px;
 }
 .cert-icon { font-size: 2.5rem; }
 .cert-text h4 {
@@ -453,6 +459,7 @@ section { padding: 6rem 3rem; }
 .studio-feature {
   display: flex; align-items: flex-start; gap: 1rem;
   padding: 1rem;
+  border-radius: 8px;
   background: var(--white);
   border-left: 3px solid var(--gold);
 }
@@ -523,6 +530,7 @@ section { padding: 6rem 3rem; }
 .stat {
   border: 1px solid rgba(245,242,238,.1);
   padding: 1.5rem;
+  border-radius: 8px;
 }
 .stat-num {
   font-family: 'Bebas Neue', sans-serif;
@@ -582,6 +590,7 @@ section { padding: 6rem 3rem; }
   width: 40px; height: 40px; background: var(--black);
   display: flex; align-items: center; justify-content: center;
   font-size: 1rem; flex-shrink: 0;
+  border-radius: 8px;
 }
 .contact-detail-text h4 {
   font-weight: 700; font-size: .82rem;
@@ -597,6 +606,7 @@ section { padding: 6rem 3rem; }
 .socials { margin-top: 2rem; display: flex; gap: .8rem; }
 .social-btn {
   width: 42px; height: 42px;
+  border-radius: 8px;
   background: var(--black);
   display: flex; align-items: center; justify-content: center;
   text-decoration: none; font-size: 1rem;
@@ -610,6 +620,7 @@ section { padding: 6rem 3rem; }
 .contact-form-wrap {
   background: var(--black);
   padding: 3rem;
+  border-radius: 20px;
 }
 .contact-form-wrap h3 {
   font-family: 'Bebas Neue', sans-serif;
@@ -849,7 +860,7 @@ footer {
   letter-spacing: .5px;
   box-shadow: 0 4px 20px rgba(37,211,102,.35);
   transition: all .25s;
-  border-radius: 2px;
+  border-radius: 8px;
 }
 .whatsapp-float:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(37,211,102,.4); }
 .whatsapp-float .wa-icon { font-size: 1.3rem; }

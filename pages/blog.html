@@ -41,7 +41,7 @@
   .blog-card {
     background: var(--white);
     border: 1px solid var(--light-gray);
-    border-radius: 4px;
+    border-radius: 15px;
     overflow: hidden;
     transition: all .3s ease;
     cursor: pointer;
@@ -56,6 +56,7 @@
   .blog-card-image {
     width: 100%;
     height: 200px;
+    border-radius: 8px;
     background: linear-gradient(135deg, var(--gold), var(--gold-light));
     display: flex;
     align-items: center;
@@ -104,7 +105,7 @@
     background: rgba(201,168,76,.1);
     color: var(--gold);
     padding: .3rem .7rem;
-    border-radius: 2px;
+    border-radius: 8px;
     font-size: .75rem;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -132,6 +133,7 @@
 
   .blog-featured .blog-card-image {
     height: 250px;
+    border-radius: 8px;
   }
 
   .blog-featured .blog-card-title {
@@ -145,6 +147,7 @@
 
   .blog-featured .blog-category {
     background: rgba(201,168,76,.2);
+    border-radius: 8px;
   }
 
   @media (max-width: 768px) {
@@ -203,10 +206,11 @@
 <section class="blog-hero">
   <h1>Blog & Insights</h1>
   <p>Creative tips, marketing strategies, industry trends, and inspiring stories from the Rimba Creative Media team.</p>
+  <br><br><br><br>
 </section>
 
 <!-- BLOG GRID -->
-<section style="padding: 4rem 3rem; background: var(--white);">
+<section style="padding: 3rem 3rem; background: var(--white);">
   <div class="container">
     <div class="blog-grid">
       <!-- Featured Post -->
@@ -316,7 +320,7 @@
     <p style="font-family: 'Bebas Neue', sans-serif; font-size: 2rem; color: var(--white); letter-spacing: 1.5px; margin-bottom: 1rem;">STAY UPDATED</p>
     <p style="color: rgba(245,242,238,.7); margin-bottom: 2rem;">Get creative tips, marketing insights, and exclusive offers delivered to your inbox. No spam, just good content.</p>
     <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
-      <input type="email" id="nlEmail" placeholder="your@email.com" style="flex: 1; padding: .8rem 1rem; border: 1px solid var(--light-gray); border-radius: 2px; font-family: 'DM Sans', sans-serif; font-size: .9rem;">
+      <input type="email" id="nlEmail" placeholder="your@email.com" style="flex: 1; padding: .8rem 1rem; border: 1px solid var(--light-gray); border-radius: 8px; font-family: 'DM Sans', sans-serif; font-size: .9rem;">
       <button class="btn-primary" onclick="subscribeNewsletter()" style="padding: .8rem 2rem;">Subscribe</button>
     </div>
     <p style="font-size: .8rem; color: rgba(245,242,238,.5);">We respect your privacy. Unsubscribe at any time.</p>
