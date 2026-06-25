@@ -6,7 +6,7 @@
 <title>Business Growth Bootcamp — RIMBA Creative Media | Kigali</title>
 <link rel="icon" type="image/png" href="../images/rimba-favicon.png">
 <meta name="description" content="Free 30-day bootcamp for business owners in Kigali. Learn the exact social media habits that bring more customers. Limited spots. Join now.">
-<link rel="stylesheet" href="../styles/style.css">
+<!-- <link rel="stylesheet" href="../styles/style.css"> -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1466,7 +1466,7 @@ footer {
           <div class="hero-card-top">
             <div class="hero-card-label">Business Growth Bootcamp</div>
             <div class="hero-card-title">What you get when you join today</div>
-            <div class="hero-card-meta">Kigali · July 2026 Cohort</div>
+            <div class="hero-card-meta">Kigali · 1 July 2026 Cohort</div>
           </div>
           <div class="hero-card-body">
             <div class="hero-card-row">
@@ -2046,7 +2046,44 @@ footer {
   function closeMobile() {
     document.getElementById('mobileMenu').classList.remove('open');
   }
-</script>
 
+
+  // Replace the existing <form> submit or button onclick with this
+
+document.querySelector('button[type="submit"], .form-submit')
+  .addEventListener('click', function(e) {
+    e.preventDefault();
+
+    const name      = document.getElementById('name').value.trim();
+    const business  = document.getElementById('business').value.trim();
+    const phone     = document.getElementById('phone').value.trim();
+    const email     = document.getElementById('email').value.trim();
+    const industry  = document.getElementById('industry').value;
+    const challenge = document.getElementById('challenge').value.trim();
+    const agreed    = document.getElementById('agree').checked;
+
+    // Basic validation
+    if (!name || !business || !phone || !industry || !challenge || !agreed) {
+      alert('Please fill in all required fields and tick the commitment box.');
+      return;
+    }
+
+    const msg = [
+      '📋 *New Bootcamp Application*',
+      '',
+      `👤 *Name:* ${name}`,
+      `🏢 *Business:* ${business}`,
+      `📱 *WhatsApp:* ${phone}`,
+      email ? `📧 *Email:* ${email}` : null,
+      `🏷️ *Industry:* ${industry}`,
+      `💬 *Challenge:* ${challenge}`,
+      '',
+      '✅ Committed to 30-day bootcamp',
+    ].filter(Boolean).join('\n');
+
+    const url = `https://wa.me/250786134003?text=${encodeURIComponent(msg)}`;
+    window.open(url, '_blank');
+});
+</script>
 </body>
 </html>
