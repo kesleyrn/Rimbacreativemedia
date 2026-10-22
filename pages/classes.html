@@ -5,27 +5,30 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Photography, Videography & Web Design Courses in Kigali | Rimba Creative Media</title>
 <link rel="icon" type="image/png" href="../images/rimba-favicon.png">
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../styles/style.css">
 <style>
   .classes-hero {
-    background: linear-gradient(135deg, var(--black) 0%, rgba(10,10,10,.8) 100%);
+    background: linear-gradient(135deg, var(--black) 0%, rgba(0,0,0,.82) 100%);
     padding: 8rem 3rem 5rem;
     margin-top: 80px;
     text-align: center;
   }
 
   .classes-hero h1 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 3.5rem;
-    letter-spacing: 2px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1.9rem, 4vw, 2.9rem);
+    letter-spacing: -0.04em;
+    line-height: 1.12;
     color: var(--white);
     margin-bottom: 1rem;
   }
 
   .classes-hero p {
     font-size: 1.1rem;
-    color: rgba(245,242,238,.7);
+    color: rgba(255,255,255,.7);
     max-width: 700px;
     margin: 0 auto;
   }
@@ -40,9 +43,9 @@
   }
 
   .new-intakes-banner h2 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 2rem;
-    letter-spacing: 1.5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1.5rem, 3vw, 1.8rem);
+    letter-spacing: -0.035em;
     margin-bottom: .5rem;
   }
 
@@ -80,7 +83,7 @@
   }
 
   .class-number-large {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 3rem;
     letter-spacing: 2px;
     margin-bottom: .5rem;
@@ -97,7 +100,7 @@
 
   .class-duration-badge {
     display: inline-block;
-    background: rgba(201,168,76,.1);
+    background: rgba(242,201,76,.1);
     color: var(--gold);
     padding: .4rem .8rem;
     border-radius: 2px;
@@ -138,7 +141,7 @@
   }
 
   .intake-info {
-    background: rgba(201,168,76,.08);
+    background: rgba(242,201,76,.08);
     padding: 1rem;
     border-left: 3px solid var(--gold);
     border-radius: 2px;
@@ -188,7 +191,7 @@
   }
 
   .btn-outline:hover {
-    background: rgba(201,168,76,.1);
+    background: rgba(242,201,76,.1);
   }
 
   .why-choose {
@@ -198,9 +201,9 @@
   }
 
   .why-choose h2 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 2rem;
-    letter-spacing: 1.5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1.5rem, 3vw, 1.8rem);
+    letter-spacing: -0.035em;
     text-align: center;
     color: var(--black);
     margin-bottom: 2rem;
@@ -252,9 +255,9 @@
   }
 
   .form-header h2 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.8rem;
-    letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1.5rem, 3vw, 1.8rem);
+    letter-spacing: -0.035em;
     color: var(--black);
     margin-bottom: .5rem;
   }
@@ -282,7 +285,7 @@
     padding: .8rem;
     border: 1px solid var(--light-gray);
     border-radius: 8px;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: .95rem;
     transition: all .2s;
   }
@@ -292,7 +295,7 @@
   .form-group textarea:focus {
     outline: none;
     border-color: var(--gold);
-    box-shadow: 0 0 0 3px rgba(201,168,76,.1);
+    box-shadow: 0 0 0 3px rgba(242,201,76,.1);
   }
 
   .form-group textarea {
@@ -323,7 +326,7 @@
     color: var(--white);
     border: none;
     border-radius: 8px;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
     font-weight: 600;
     letter-spacing: 1px;
@@ -343,7 +346,7 @@
 
   @media (max-width: 768px) {
     .classes-hero h1 {
-      font-size: 2.5rem;
+      font-size: clamp(1.7rem, 6vw, 2.2rem);
     }
 
     .class-cta {
@@ -415,7 +418,7 @@
 <section style="padding: 4rem 3rem; background: var(--white);">
   <div class="container">
     <div class="new-intakes-banner">
-      <h2>🎓 NEW INTAKES AVAILABLE</h2>
+      <h2><i class="lucide-icon" data-lucide="graduation-cap" aria-hidden="true"></i> NEW INTAKES AVAILABLE</h2>
       <p>Classes starting June 2026 — Limited spots available. Apply now to secure your place!</p>
     </div>
 
@@ -531,32 +534,32 @@
     <h2>Why Choose Rimba Classes?</h2>
     <div class="why-grid">
       <div class="why-item">
-        <div class="why-icon">👨‍🏫</div>
+        <div class="why-icon"><i class="lucide-icon" data-lucide="user-round-check" aria-hidden="true"></i></div>
         <h3>Expert Instructors</h3>
         <p>Learn from professionals actively working in the industry — people who do this work every day.</p>
       </div>
       <div class="why-item">
-        <div class="why-icon">🏆</div>
+        <div class="why-icon"><i class="lucide-icon" data-lucide="award" aria-hidden="true"></i></div>
         <h3>Real Credentials</h3>
         <p>Every graduate receives an official Rimba Creative Media certificate valued by employers.</p>
       </div>
       <div class="why-item">
-        <div class="why-icon">💼</div>
+        <div class="why-icon"><i class="lucide-icon" data-lucide="briefcase-business" aria-hidden="true"></i></div>
         <h3>Portfolio Building</h3>
         <p>Create real projects during the course that go directly into your professional portfolio.</p>
       </div>
       <div class="why-item">
-        <div class="why-icon">🎬</div>
+        <div class="why-icon"><i class="lucide-icon" data-lucide="clapperboard" aria-hidden="true"></i></div>
         <h3>Pro Equipment</h3>
         <p>Use professional cameras, editing software, and studio equipment throughout your training.</p>
       </div>
       <div class="why-item">
-        <div class="why-icon">🤝</div>
+        <div class="why-icon"><i class="lucide-icon" data-lucide="handshake" aria-hidden="true"></i></div>
         <h3>Job Support</h3>
         <p>We connect graduates with opportunities and refer them to job openings when available.</p>
       </div>
       <div class="why-item">
-        <div class="why-icon">💰</div>
+        <div class="why-icon"><i class="lucide-icon" data-lucide="circle-dollar-sign" aria-hidden="true"></i></div>
         <h3>Affordable Rates</h3>
         <p>High-quality training at prices that work for Kigali residents. Flexible payment options available.</p>
       </div>
@@ -565,7 +568,7 @@
 </section>
 
 <!-- APPLICATION FORM -->
-<section class="application-section">
+<section id="apply" class="application-section">
   <div id="appForm" class="form-container">
     <div class="form-header">
       <h2>Apply for a Course</h2>
@@ -573,7 +576,7 @@
     </div>
 
     <div id="formSuccess" class="form-success">
-      <span>✅</span>
+      <span><i class="lucide-icon" data-lucide="circle-check-big" aria-hidden="true"></i></span>
       Application submitted! We'll contact you soon.
     </div>
 
@@ -629,16 +632,16 @@
 <!-- CTA SECTION -->
 <section style="background: var(--black); padding: 4rem 3rem; text-align: center; color: var(--white);">
   <div class="container" style="max-width: 700px;">
-    <h2 style="font-family: 'Bebas Neue', sans-serif; font-size: 2.5rem; letter-spacing: 1.5px; margin-bottom: 1rem;">Still Have Questions?</h2>
-    <p style="color: rgba(245,242,238,.7); margin-bottom: 2rem;">Contact us directly and our team will help you choose the right course.</p>
+    <h2 style="font-family: 'Montserrat', sans-serif; font-size: clamp(1.5rem, 3vw, 1.9rem); letter-spacing: -0.035em; line-height: 1.2; margin-bottom: 1rem;">Still Have Questions?</h2>
+    <p style="color: rgba(255,255,255,.7); margin-bottom: 2rem;">Contact us directly and our team will help you choose the right course.</p>
     <a href="tel:+250786134003" class="btn-primary">Call Us</a>
-    <p style="margin-top: 1.5rem; font-size: .9rem; color: rgba(245,242,238,.6);"><a href="mailto:rimbacreativemedia@gmail.com" style="color: var(--gold); text-decoration: none;">Or email us</a></p>
+    <p style="margin-top: 1.5rem; font-size: .9rem; color: rgba(255,255,255,.6);"><a href="mailto:rimbacreativemedia@gmail.com" style="color: var(--gold); text-decoration: none;">Or email us</a></p>
   </div>
 </section>
 
 <!-- BACK LINK -->
 <section style="padding: 3rem; text-align: center; background: var(--white);">
-  <a href="../index.html" style="display: inline-block; font-family: 'Space Mono', monospace; font-size: .8rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold); padding-bottom: .3rem;">← Back to Home</a>
+  <a href="../index.html" style="display: inline-block; font-family: 'Montserrat', sans-serif; font-size: .8rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold); padding-bottom: .3rem;">← Back to Home</a>
 </section>
 
 <!-- FOOTER -->
@@ -754,6 +757,7 @@
     }, 3000);
   }
 </script>
+<script src="https://unpkg.com/lucide@0.468.0"></script>
+<script>lucide.createIcons();</script>
 </body>
 </html>
-

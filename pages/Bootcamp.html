@@ -10,32 +10,39 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600&family=Bebas+Neue&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
  <style> 
 /* ── TOKENS ───────────────────────────────────────────────── */
 :root {
-  --black:       #0A0A0A;
+  --black:       #000000;
   --ink:         #000000;
-  --ink-mid:     #1A1A1A;
-  --ink-dark:    #0D0D0D;
-  --gold:        #c9a84c;
-  --gold-light:  #e2c47a;
-  --gold-pale:   #FBF3E4;
-  --cream:       #FAF7F2;
-  --grey-mid:    #6B6B6B;
-  --grey-light:  #E8E4DF;
+  --ink-mid:     #000000;
+  --ink-dark:    #000000;
+  --gold:        #F2C94C;
+  --gold-light:  #F2C94C;
+  --gold-pale:   #FFFFFF;
+  --cream:       #FFFFFF;
+  --grey-mid:    #666666;
+  --grey-light:  #FFFFFF;
   --white:       #FFFFFF;
-  --font-display: 'Sora', sans-serif;
-  --font-body:    'Inter', sans-serif;
-  --font-logo:    'Bebas Neue', sans-serif;
+  --font-display: 'Montserrat', sans-serif;
+  --font-body:    'Montserrat', sans-serif;
+  --font-logo:    'Montserrat', sans-serif;
+}
+
+.lucide-icon {
+  width: 1em;
+  height: 1em;
+  stroke-width: 1.75;
+  vertical-align: middle;
 }
 
 /* ── RESET ────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
-  font-family: var(--font-body);
+  font-family: 'Montserrat', sans-serif;
   background: var(--grey-light);
   color: var(--black);
   line-height: 1.6;
@@ -58,7 +65,7 @@ a { color: inherit; text-decoration: none; }
   border-radius: 2px;
 }
 .eyebrow {
-  font-family: var(--font-display);
+  font-family: 'Montserrat', sans-serif;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 3px;
@@ -66,10 +73,10 @@ a { color: inherit; text-decoration: none; }
   color: var(--gold);
 }
 .section-label {
-  font-family: var(--font-display);
+  font-family: 'Montserrat', sans-serif;
   font-size: 10px;
   font-weight: 700;
-  letter-spacing: 4px;
+  letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--grey-mid);
 }
@@ -85,7 +92,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 1rem 3rem;
-    background: rgba(245, 242, 238, 0.92);
+    background: rgba(255,255,255,0.94);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--light-gray);
     transition: all .3s;
@@ -107,7 +114,7 @@ nav {
 }
 
 .logo-text {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.15rem;
     letter-spacing: 2px;
     color: var(--black);
@@ -115,7 +122,7 @@ nav {
 }
 .logo-sub {
   display: block;
-  font-family: var(--font-body);
+  font-family: 'Montserrat', sans-serif;
   font-size: 10px;
   font-weight: 600;
   letter-spacing: 2.5px;
@@ -153,7 +160,7 @@ nav {
 .nav-join {
   background: var(--gold);
   color: var(--black);
-  font-family: var(--font-display);
+  font-family: 'Montserrat', sans-serif;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.8px;
@@ -162,7 +169,7 @@ nav {
   text-transform: uppercase;
   transition: background 0.2s, transform 0.15s;
 }
-.nav-join:hover { background: #D4A84A; transform: translateY(-1px); }
+.nav-join:hover { background: #F2C94C; transform: translateY(-1px); }
 .hamburger {
   display: none;
   flex-direction: column;
@@ -179,7 +186,7 @@ nav {
   display: block;
   width: 22px;
   height: 2px;
-  background: var(--white);
+  background: var(--black);
   border-radius: 2px;
 }
 .mobile-menu {
@@ -199,7 +206,7 @@ nav {
 }
 .mobile-menu.open { transform: translateX(0); }
 .mobile-menu a {
-  font-family: var(--font-logo);
+  font-family: 'Montserrat', sans-serif;
   font-size: 28px;
   letter-spacing: 1px;
   color: var(--white);
@@ -230,7 +237,7 @@ nav {
   .hero-pills { gap: 0.3rem; margin-bottom: 1.2rem; }
   .pill { font-size: 0.6rem; padding: 0.2rem 0.5rem; }
   .hero-btns { flex-direction: column; gap: 0.4rem; }
-  .hero-title { font-size: clamp(2.5rem, 10vw, 4rem); margin-bottom: 0.6rem; }
+  .hero-title { font-size: clamp(2.2rem, 9vw, 3rem); margin-bottom: 0.6rem; }
   .btn-primary, .btn-outline { padding: 0.55rem 1rem; font-size: 0.65rem; }
   /* Hero buttons: single row */
   .hero-btns-row { flex-direction: row; flex-wrap: nowrap; gap: 0.25rem; }
@@ -288,8 +295,8 @@ nav {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   background:
-    radial-gradient(ellipse 60% 50% at 80% 40%, rgba(200,151,58,0.16) 0%, transparent 70%),
-    radial-gradient(ellipse 40% 60% at 10% 70%, rgba(200,151,58,0.08) 0%, transparent 60%);
+    radial-gradient(ellipse 60% 50% at 80% 40%, rgba(242,201,76,0.16) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 60% at 10% 70%, rgba(242,201,76,0.08) 0%, transparent 60%);
   pointer-events: none;
 }
 .hero-grid {
@@ -300,40 +307,12 @@ nav {
   position: relative;
   z-index: 1;
 }
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(200,151,58,0.12);
-  border: 1px solid rgba(200,151,58,0.3);
-  border-radius: 100px;
-  padding: 6px 14px;
-  margin-bottom: 28px;
-}
-.hero-badge-dot {
-  width: 7px;
-  height: 7px;
-  background: var(--gold);
-  border-radius: 50%;
-  animation: pulse 2s infinite;
-}
-@keyframes pulse {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.5; transform: scale(1.3); }
-}
-.hero-badge-text {
-  font-family: var(--font-display);
-  font-size: 11px;
-  font-weight: 600;
-  color: var(--gold);
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-}
 .hero-title {
-  font-family: var(--font-display);
-  font-size: clamp(36px, 5vw, 58px);
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(28px, 3.5vw, 40px);
   font-weight: 800;
-  line-height: 1.05;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
   color: var(--grey-light);
   margin-bottom: 20px;
 }
@@ -342,7 +321,7 @@ nav {
   display: block;
 }
 .hero-sub {
-  font-family: var(--font-body);
+  font-family: 'Montserrat', sans-serif;
   font-size: 17px;
   font-weight: 400;
   color: rgba(255,255,255,0.65);
@@ -365,7 +344,7 @@ nav {
   gap: 2px;
 }
 .hero-proof-num {
-  font-family: var(--font-display);
+  font-family: 'Montserrat', sans-serif;
   font-size: 22px;
   font-weight: 800;
   color: var(--gold);
@@ -388,7 +367,7 @@ nav {
 .btn-primary {
   background: var(--gold);
   color: var(--black);
-  font-family: var(--font-display);
+  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   font-weight: 700;
   padding: 16px 32px;
@@ -399,11 +378,11 @@ nav {
   letter-spacing: 0.3px;
   display: inline-block;
 }
-.btn-primary:hover { background: #D4A84A; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(200,151,58,0.35); }
+.btn-primary:hover { background: #F2C94C; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(242,201,76,0.35); }
 .btn-secondary {
   background: transparent;
   color: var(--white);
-  font-family: var(--font-display);
+  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   font-weight: 600;
   padding: 16px 28px;
@@ -429,7 +408,7 @@ nav {
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 .hero-card-label {
-  font-family: var(--font-display);
+  font-family: 'Montserrat', sans-serif;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 3px;
@@ -462,7 +441,7 @@ nav {
 .hero-card-icon {
   width: 32px;
   height: 32px;
-  background: rgba(200,151,58,0.12);
+  background: rgba(242,201,76,0.12);
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -472,7 +451,7 @@ nav {
   margin-top: 2px;
 }
 .hero-card-row-title {
-  font-family: var(--font-display);
+  font-family: 'Montserrat', sans-serif;
   font-size: 13px;
   font-weight: 600;
   color: var(--grey-light);
@@ -485,14 +464,14 @@ nav {
 }
 .hero-card-footer {
   padding: 16px 24px;
-  background: rgba(200,151,58,0.06);
-  border-top: 1px solid rgba(200,151,58,0.15);
+  background: rgba(242,201,76,0.06);
+  border-top: 1px solid rgba(242,201,76,0.15);
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 .spots-left {
-  font-family: var(--font-display);
+  font-family: 'Montserrat', sans-serif;
   font-size: 12px;
   font-weight: 700;
   color: var(--gold);
@@ -554,10 +533,12 @@ nav {
   margin-bottom: 60px;
 }
 .problem-header h2 {
-  font-family: var(--font-display);
-  font-size: clamp(26px, 3.5vw, 38px);
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(22px, 2.6vw, 30px);
+  letter-spacing: -0.025em;
   font-weight: 800;
-  line-height: 1.2;
+  line-height: 1.18;
+  letter-spacing: -0.03em;
   margin: 16px 0 16px;
   color: var(--black);
 }
@@ -590,7 +571,7 @@ nav {
 }
 .problem-card:hover::before { opacity: 1; }
 .problem-num {
-  font-family: var(--font-display);
+  font-family: 'Montserrat', sans-serif;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 2px;
@@ -598,7 +579,7 @@ nav {
   margin-bottom: 14px;
 }
 .problem-card h3 {
-  font-family: var(--font-display);
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   font-weight: 700;
   color: var(--black);
@@ -624,7 +605,7 @@ nav {
   top: -100px; right: -100px;
   width: 500px;
   height: 500px;
-  background: radial-gradient(ellipse, rgba(200,151,58,0.12) 0%, transparent 70%);
+  background: radial-gradient(ellipse, rgba(242,201,76,0.12) 0%, transparent 70%);
   pointer-events: none;
 }
 .offer-header {
@@ -632,9 +613,12 @@ nav {
   margin-bottom: 64px;
 }
 .offer-header h2 {
-  font-family: var(--font-display);
-  font-size: clamp(26px, 3.5vw, 40px);
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(22px, 2.6vw, 30px);
+  letter-spacing: -0.025em;
   font-weight: 800;
+  line-height: 1.18;
+  letter-spacing: -0.03em;
   color: var(--grey-light);
   margin: 16px auto 16px;
   line-height: 1.2;
@@ -660,7 +644,7 @@ nav {
   transition: border-color 0.2s, background 0.2s;
 }
 .offer-card:hover {
-  border-color: rgba(200,151,58,0.3);
+  border-color: rgba(242,201,76,0.3);
   background: rgba(255,255,255,0.06);
 }
 .offer-card-icon {
@@ -668,7 +652,7 @@ nav {
   margin-bottom: 14px;
 }
 .offer-card-tag {
-  font-family: var(--font-display);
+  font-family: 'Montserrat', sans-serif;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 2.5px;
@@ -677,7 +661,7 @@ nav {
   margin-bottom: 8px;
 }
 .offer-card h3 {
-  font-family: var(--font-display);
+  font-family: 'Montserrat', sans-serif;
   font-size: 17px;
   font-weight: 700;
   color: var(--white);
@@ -690,8 +674,8 @@ nav {
   line-height: 1.65;
 }
 .offer-highlight {
-  background: rgba(200,151,58,0.08);
-  border: 1px solid rgba(200,151,58,0.25);
+  background: rgba(242,201,76,0.08);
+  border: 1px solid rgba(242,201,76,0.25);
   border-radius: 12px;
   padding: 24px 28px;
   display: flex;
@@ -701,7 +685,7 @@ nav {
   flex-wrap: wrap;
 }
 .offer-highlight-text {
-  font-family: var(--font-display);
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   font-weight: 600;
   color: var(--white);
@@ -713,7 +697,7 @@ nav {
 .offer-highlight-badge {
   background: var(--gold);
   color: var(--black);
-  font-family: var(--font-display);
+  font-family: 'Montserrat', sans-serif;
   font-size: 12px;
   font-weight: 800;
   letter-spacing: 1px;
@@ -733,9 +717,12 @@ nav {
   margin-bottom: 64px;
 }
 .how-header h2 {
-  font-family: var(--font-display);
-  font-size: clamp(26px, 3.5vw, 40px);
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(22px, 2.6vw, 30px);
+  letter-spacing: -0.025em;
   font-weight: 800;
+  line-height: 1.18;
+  letter-spacing: -0.03em;
   color: var(--black);
   margin: 16px auto 16px;
   max-width: 500px;
@@ -778,7 +765,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-display);
+  font-family: 'Montserrat', sans-serif;
   font-size: 15px;
   font-weight: 800;
   color: var(--gold);
@@ -794,7 +781,7 @@ nav {
 .step:last-child .step-line { display: none; }
 .step-right {}
 .step-tag {
-  font-family: var(--font-display);
+  font-family: 'Montserrat', sans-serif;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 2.5px;
@@ -803,7 +790,7 @@ nav {
   margin-bottom: 6px;
 }
 .step-right h3 {
-  font-family: var(--font-display);
+  font-family: 'Montserrat', sans-serif;
   font-size: 18px;
   font-weight: 700;
   color: var(--black);
@@ -837,9 +824,12 @@ nav {
   align-items: start;
 }
 .learn-left h2 {
-  font-family: var(--font-display);
-  font-size: clamp(26px, 3.5vw, 38px);
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(22px, 2.6vw, 30px);
+  letter-spacing: -0.025em;
   font-weight: 800;
+  line-height: 1.18;
+  letter-spacing: -0.03em;
   color: var(--black);
   margin: 16px 0 16px;
   line-height: 1.2;
@@ -859,7 +849,7 @@ nav {
 .learn-fw-header {
   background: var(--ink);
   padding: 16px 20px;
-  font-family: var(--font-display);
+  font-family: 'Montserrat', sans-serif;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 2.5px;
@@ -881,7 +871,7 @@ nav {
   flex-shrink: 0;
 }
 .learn-fw-title {
-  font-family: var(--font-display);
+  font-family: 'Montserrat', sans-serif;
   font-size: 13px;
   font-weight: 700;
   color: var(--white);
@@ -915,7 +905,7 @@ nav {
 .week-num-badge {
   background: var(--ink);
   color: var(--gold);
-  font-family: var(--font-display);
+  font-family: 'Montserrat', sans-serif;
   font-size: 11px;
   font-weight: 800;
   padding: 4px 10px;
@@ -923,7 +913,7 @@ nav {
   white-space: nowrap;
 }
 .week-title {
-  font-family: var(--font-display);
+  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   font-weight: 700;
   color: var(--black);
@@ -960,8 +950,8 @@ nav {
 .zoom {
   padding: 80px 0;
   background: var(--gold-pale);
-  border-top: 1px solid rgba(200,151,58,0.2);
-  border-bottom: 1px solid rgba(200,151,58,0.2);
+  border-top: 1px solid rgba(242,201,76,0.2);
+  border-bottom: 1px solid rgba(242,201,76,0.2);
 }
 .zoom-inner {
   display: grid;
@@ -970,9 +960,12 @@ nav {
   align-items: center;
 }
 .zoom-left h2 {
-  font-family: var(--font-display);
-  font-size: clamp(22px, 3vw, 34px);
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(20px, 2.5vw, 28px);
+  letter-spacing: -0.025em;
   font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
   color: var(--black);
   margin: 12px 0 14px;
   line-height: 1.2;
@@ -1008,9 +1001,9 @@ nav {
   flex-shrink: 0;
 }
 .zoom-card-icon.group-icon { background: rgba(10,10,10,0.06); }
-.zoom-card-icon.personal-icon { background: rgba(200,151,58,0.1); }
+.zoom-card-icon.personal-icon { background: rgba(242,201,76,0.1); }
 .zoom-card-title {
-  font-family: var(--font-display);
+  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   font-weight: 700;
   color: var(--black);
@@ -1028,7 +1021,7 @@ nav {
   color: var(--white);
 }
 .zoom-right-label {
-  font-family: var(--font-display);
+  font-family: 'Montserrat', sans-serif;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 3px;
@@ -1037,7 +1030,7 @@ nav {
   margin-bottom: 14px;
 }
 .zoom-right h3 {
-  font-family: var(--font-display);
+  font-family: 'Montserrat', sans-serif;
   font-size: 20px;
   font-weight: 800;
   color: var(--grey-light);
@@ -1075,7 +1068,7 @@ nav {
   width: 100%;
   background: var(--gold);
   color: var(--black);
-  font-family: var(--font-display);
+  font-family: 'Montserrat', sans-serif;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.5px;
@@ -1087,7 +1080,7 @@ nav {
   text-align: center;
   display: block;
 }
-.zoom-book-btn:hover { background: #D4A84A; transform: translateY(-1px); }
+.zoom-book-btn:hover { background: #F2C94C; transform: translateY(-1px); }
 
 /* ── FORM SECTION ─────────────────────────────────────────── */
 .form-section {
@@ -1102,7 +1095,7 @@ nav {
   bottom: -80px; left: -80px;
   width: 400px;
   height: 400px;
-  background: radial-gradient(ellipse, rgba(200,151,58,0.06) 0%, transparent 70%);
+  background: radial-gradient(ellipse, rgba(242,201,76,0.06) 0%, transparent 70%);
   pointer-events: none;
 }
 .form-inner {
@@ -1114,9 +1107,12 @@ nav {
   z-index: 1;
 }
 .form-left h2 {
-  font-family: var(--font-display);
-  font-size: clamp(26px, 3.5vw, 40px);
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(22px, 2.6vw, 30px);
+  letter-spacing: -0.025em;
   font-weight: 800;
+  line-height: 1.18;
+  letter-spacing: -0.03em;
   color: var(--grey-light);
   margin: 16px 0 16px;
   line-height: 1.2;
@@ -1140,7 +1136,7 @@ nav {
 .form-guarantee-icon {
   width: 28px;
   height: 28px;
-  background: rgba(200,151,58,0.12);
+  background: rgba(242,201,76,0.12);
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -1170,7 +1166,7 @@ nav {
   padding: 24px 28px;
 }
 .form-card-top h3 {
-  font-family: var(--font-display);
+  font-family: 'Montserrat', sans-serif;
   font-size: 18px;
   font-weight: 800;
   color: var(--grey-light);
@@ -1188,7 +1184,7 @@ nav {
 }
 label {
   display: block;
-  font-family: var(--font-display);
+  font-family: 'Montserrat', sans-serif;
   font-size: 12px;
   font-weight: 700;
   color: var(--black);
@@ -1206,7 +1202,7 @@ textarea {
   padding: 13px 16px;
   border: 1.5px solid var(--grey-light);
   border-radius: 8px;
-  font-family: var(--font-body);
+  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   color: var(--black);
   background: var(--cream);
@@ -1254,7 +1250,7 @@ select {
   width: 100%;
   background: var(--ink);
   color: var(--grey-light);
-  font-family: var(--font-display);
+  font-family: 'Montserrat', sans-serif;
   font-size: 15px;
   font-weight: 700;
   padding: 17px 24px;
@@ -1264,7 +1260,7 @@ select {
   transition: all 0.2s;
   letter-spacing: 0.3px;
 }
-.form-submit:hover { background: var(--ink-mid); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(200,151,58,0.35); }
+.form-submit:hover { background: var(--ink-mid); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(242,201,76,0.35); }
 .form-note {
   text-align: center;
   font-size: 12px;
@@ -1276,24 +1272,26 @@ select {
 /* ── FOOTER ───────────────────────────────────────────────── */
 footer {
   background: var(--black);
-  padding: 64px 0 0;
-  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 4rem 0 2rem;
+  border-top: 1px solid rgba(242,201,76,.12);
 }
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.6fr 1fr 1fr 1fr;
-  gap: 40px;
-  padding-bottom: 48px;
+  max-width: 1200px;
+  margin: 0 auto;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 3rem;
+  padding-bottom: 3rem;
 }
 .footer-brand p {
-  font-size: 13px;
-  color: rgba(255,255,255,0.5);
-  line-height: 1.65;
-  margin-top: 14px;
+  font-size: .85rem;
+  color: rgba(255,255,255,.4);
+  line-height: 1.7;
+  margin-top: .8rem;
   max-width: 280px;
 }
 .footer-col h4 {
-  font-family: var(--font-display);
+  font-family: 'Montserrat', sans-serif;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 1.5px;
@@ -1310,11 +1308,14 @@ footer {
 .footer-col ul li, .footer-col ul li a {
   font-size: 13px;
   color: rgba(255,255,255,0.55);
+  overflow-wrap: anywhere;
 }
 .footer-col ul li a:hover { color: var(--gold); }
 .footer-bottom {
-  border-top: 1px solid rgba(255,255,255,0.08);
-  padding: 22px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-top: 1px solid rgba(242,201,76,.12);
+  padding: 1.5rem 0 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1322,8 +1323,8 @@ footer {
   gap: 16px;
 }
 .footer-bottom p {
-  font-size: 12px;
-  color: rgba(255,255,255,0.3);
+  font-size: .8rem;
+  color: rgba(255,255,255,.4);
 }
 .socials { display: flex; gap: 10px; }
 .social-btn {
@@ -1339,7 +1340,7 @@ footer {
 }
 .social-btn:hover { background: var(--gold); color: var(--black); }
 @media (max-width: 700px) {
-  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
 }
 
 /* ── RESPONSIVE ───────────────────────────────────────────── */
@@ -1351,7 +1352,7 @@ footer {
   .learn-inner { grid-template-columns: 1fr; gap: 48px; }
   .zoom-inner { grid-template-columns: 1fr; gap: 40px; }
   .form-inner { grid-template-columns: 1fr; gap: 48px; }
-  .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem; }
 }
 @media (max-width: 600px) {
   .hero { padding: 88px 0 64px; }
@@ -1420,15 +1421,10 @@ footer {
 
       <div class="hero-left">
        
-<br>
         <h1 class="hero-title">
           Your Business<br>Deserves More
           <span class="accent">Customers.</span>
         </h1>
-        <div class="hero-badge">
-          <div class="hero-badge-dot"></div>
-          <span class="hero-badge-text">30-Day Free Programme · Kigali, Rwanda</span>
-        </div>
         <p class="hero-sub">
           Most business owners in Kigali are active on social media
           but getting <strong>zero results from it.</strong>
@@ -1470,28 +1466,28 @@ footer {
           </div>
           <div class="hero-card-body">
             <div class="hero-card-row">
-              <div class="hero-card-icon">📖</div>
+              <div class="hero-card-icon"><i class="lucide-icon" data-lucide="book-open" aria-hidden="true"></i></div>
               <div>
                 <div class="hero-card-row-title">4 Free Marketing Guides</div>
                 <div class="hero-card-row-desc">Step-by-step, no complicated terms. Built for real business owners.</div>
               </div>
             </div>
             <div class="hero-card-row">
-              <div class="hero-card-icon">💬</div>
+              <div class="hero-card-icon"><i class="lucide-icon" data-lucide="message-circle" aria-hidden="true"></i></div>
               <div>
                 <div class="hero-card-row-title">Private WhatsApp Group</div>
                 <div class="hero-card-row-desc">Daily tips, practical tasks, and Reflection Questions — with other Kigali business owners.</div>
               </div>
             </div>
             <div class="hero-card-row">
-              <div class="hero-card-icon">🎥</div>
+              <div class="hero-card-icon"><i class="lucide-icon" data-lucide="video" aria-hidden="true"></i></div>
               <div>
                 <div class="hero-card-row-title">Weekly Zoom Sessions</div>
                 <div class="hero-card-row-desc">Live learning every week. Bring your questions. We answer directly.</div>
               </div>
             </div>
             <div class="hero-card-row">
-              <div class="hero-card-icon">🤝</div>
+              <div class="hero-card-icon"><i class="lucide-icon" data-lucide="handshake" aria-hidden="true"></i></div>
               <div>
                 <div class="hero-card-row-title">Free 1-on-1 Consultation</div>
                 <div class="hero-card-row-desc">Book a private Zoom with RIMBA to audit your specific business.</div>
@@ -1569,25 +1565,25 @@ footer {
 
     <div class="offer-grid fade-up">
       <div class="offer-card">
-        <div class="offer-card-icon">📋</div>
+        <div class="offer-card-icon"><i class="lucide-icon" data-lucide="clipboard-list" aria-hidden="true"></i></div>
         <div class="offer-card-tag">Week 1–4</div>
         <h3>4 Free Marketing Guides — Delivered to You</h3>
         <p>One new guide every week. Each one covers a specific skill your business needs to attract customers on social media. No complicated terms. Clear, practical, and built for people who are busy running a business.</p>
       </div>
       <div class="offer-card">
-        <div class="offer-card-icon">💬</div>
+        <div class="offer-card-icon"><i class="lucide-icon" data-lucide="message-circle" aria-hidden="true"></i></div>
         <div class="offer-card-tag">Daily</div>
         <h3>Private WhatsApp Group for Business Owners</h3>
         <p>Not a chat group — a structured learning community. Every morning: one tip. Every afternoon: one task. You learn alongside other business owners in Kigali who are facing the exact same challenges.</p>
       </div>
       <div class="offer-card">
-        <div class="offer-card-icon">🎥</div>
+        <div class="offer-card-icon"><i class="lucide-icon" data-lucide="video" aria-hidden="true"></i></div>
         <div class="offer-card-tag">Every Week</div>
         <h3>Live Weekly Zoom Sessions with RIMBA</h3>
         <p>Once a week, we meet live on Zoom. You bring your questions. We work through real problems — together, as a group. No slides. No presentations. Direct, practical conversation.</p>
       </div>
       <div class="offer-card">
-        <div class="offer-card-icon">🎯</div>
+        <div class="offer-card-icon"><i class="lucide-icon" data-lucide="target" aria-hidden="true"></i></div>
         <div class="offer-card-tag">Book Anytime</div>
         <h3>Free Personal Consultation — 1-on-1 with RIMBA</h3>
         <p>Every member can book a private Zoom session with our team. We look at your specific business together, identify exactly what is holding your growth back, and tell you clearly what to do next.</p>
@@ -1693,21 +1689,21 @@ footer {
         <div class="learn-framework">
           <div class="learn-fw-header">Framework: Building the Person Behind the Business</div>
           <div class="learn-fw-row">
-            <div class="learn-fw-icon">🧠</div>
+            <div class="learn-fw-icon"><i class="lucide-icon" data-lucide="brain" aria-hidden="true"></i></div>
             <div>
               <div class="learn-fw-title">Your Hobbies &amp; Daily Routines</div>
               <div class="learn-fw-desc">Discipline and creativity that make your business consistent</div>
             </div>
           </div>
           <div class="learn-fw-row">
-            <div class="learn-fw-icon">🤝</div>
+            <div class="learn-fw-icon"><i class="lucide-icon" data-lucide="handshake" aria-hidden="true"></i></div>
             <div>
               <div class="learn-fw-title">Your Circle</div>
               <div class="learn-fw-desc">The people around you shape your business more than you think</div>
             </div>
           </div>
           <div class="learn-fw-row">
-            <div class="learn-fw-icon">🌿</div>
+            <div class="learn-fw-icon"><i class="lucide-icon" data-lucide="tree-pine" aria-hidden="true"></i></div>
             <div>
               <div class="learn-fw-title">Your Environment</div>
               <div class="learn-fw-desc">Control what enters your world. Better inputs = better decisions</div>
@@ -1803,7 +1799,7 @@ footer {
 
         <div class="zoom-meeting-cards">
           <div class="zoom-card">
-            <div class="zoom-card-icon group-icon">👥</div>
+            <div class="zoom-card-icon group-icon"><i class="lucide-icon" data-lucide="users-round" aria-hidden="true"></i></div>
             <div>
               <div class="zoom-card-title">Weekly Group Zoom </div>
               <div class="zoom-card-desc">
@@ -1812,7 +1808,7 @@ footer {
             </div>
           </div>
           <div class="zoom-card">
-            <div class="zoom-card-icon personal-icon">🎯</div>
+            <div class="zoom-card-icon personal-icon"><i class="lucide-icon" data-lucide="target" aria-hidden="true"></i></div>
             <div>
               <div class="zoom-card-title">Free 1-on-1 Consultation — Book Anytime</div>
               <div class="zoom-card-desc">
@@ -2085,5 +2081,7 @@ document.querySelector('button[type="submit"], .form-submit')
     window.open(url, '_blank');
 });
 </script>
+<script src="https://unpkg.com/lucide@0.468.0"></script>
+<script>lucide.createIcons();</script>
 </body>
 </html>

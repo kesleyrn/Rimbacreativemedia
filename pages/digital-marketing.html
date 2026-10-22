@@ -7,7 +7,9 @@
 <meta name="description" content="Rimba Creative Media is a top Kigali digital marketing agency offering social media marketing, SEO, Google Ads, content strategy, video production, brand growth and website conversion services.">
 <meta name="keywords" content="Digital Marketing Kigali, Social Media Marketing, SEO Services, Google Ads Campaigns, Facebook Advertising, Content Strategy, Website Conversion, Video Marketing, Brand Growth, Advertising Agency">
 <link rel="icon" type="image/png" href="../images/rimba-favicon.png">
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../styles/style.css">
 <style>
   .page-hero {
@@ -18,9 +20,10 @@
     margin-top: 80px;
   }
   .page-hero h1 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 3.5rem;
-    letter-spacing: 2px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1.9rem, 4vw, 2.9rem);
+    letter-spacing: -0.04em;
+    line-height: 1.12;
     margin-bottom: 1rem;
   }
   .page-hero p {
@@ -76,10 +79,10 @@
     margin-top: 2rem;
   }
   .data-point {
-    background: rgba(255,255,255,.05);
+    background: rgba(242,201,76,.08);
     padding: 1.3rem;
     border-radius: 8px;
-    border: 1px solid rgba(255,255,255,.08);
+    border: 1px solid rgba(242,201,76,.12);
   }
   .data-point h3 {
     margin: 0;
@@ -88,12 +91,12 @@
   }
   .data-point p {
     margin: .5rem 0 0;
-    color: rgba(245,242,238,.75);
+    color: rgba(255,255,255,.8);
     font-size: .9rem;
   }
   @media (max-width: 768px) {
     .page-hero { padding: 6rem 2rem 4rem; }
-    .page-hero h1 { font-size: 2.8rem; }
+    .page-hero h1 { font-size: clamp(1.7rem, 6vw, 2.2rem); }
   }
 </style>
 </head>
@@ -191,7 +194,7 @@
 
     <div style="display:grid;gap:1.5rem;margin-top:1.5rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));">
       <div style="background:var(--white);border:1px solid var(--light-gray);padding:1.5rem;border-radius:15px;">
-        <h3>Be Ubuntu Germany Language School</h3>
+        <h3>Be Ubuntu Germany Language Institute</h3>
         <p style="color:var(--gray);">Operating in Rwanda, Uganda, Tanzania, and Burundi since 2024. We provide their regional digital marketing, social content, and campaign management to grow enrollments and awareness.</p>
       </div>
 
@@ -203,6 +206,21 @@
       <div style="background:var(--white);border:1px solid var(--light-gray);padding:1.5rem;border-radius:15px;">
         <h3>Talento Nyirumuheto — Umuheto Creatives</h3>
         <p style="color:var(--gray);">Supporting the fashion brand Umuheto Creatives with social media management and digital presence growth since 2023.</p>
+      </div>
+
+      <div style="background:var(--white);border:1px solid var(--light-gray);padding:1.5rem;border-radius:15px;">
+        <h3>Vibrant Visions</h3>
+        <p style="color:var(--gray);">Recently selected RIMBA to support its digital marketing in the food supplements sector.</p>
+      </div>
+
+      <div style="background:var(--white);border:1px solid var(--light-gray);padding:1.5rem;border-radius:15px;">
+        <h3>Zhavilah Business Group</h3>
+        <p style="color:var(--gray);">We work with Zhavilah Business Group to promote its finance education and help more people learn about finance.</p>
+      </div>
+
+      <div style="background:var(--white);border:1px solid var(--light-gray);padding:1.5rem;border-radius:15px;">
+        <h3>Greenstars</h3>
+        <p style="color:var(--gray);">We support Greenstars with content creation and production for its brand.</p>
       </div>
     </div>
 
@@ -268,7 +286,7 @@
 <section style="padding: 4rem 3rem; background: var(--black); color: var(--white);">
   <div class="container">
     <h2 class="section-title" style="color: var(--white);">Ready to grow your business online?</h2>
-    <p class="section-desc" style="color: rgba(245,242,238,.75);">Book a free digital marketing consultation with Rimba Creative Media today. We help businesses in Kigali improve search rankings, launch lead-generating ads, and increase monthly revenue.</p>
+    <p class="section-desc" style="color: rgba(255,255,255,.8);">Book a free digital marketing consultation with Rimba Creative Media today. We help businesses in Kigali improve search rankings, launch lead-generating ads, and increase monthly revenue.</p>
     <div style="margin-top: 2rem; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
       <a href="./Bootcamp.html" class="btn-primary">Join Free Bootcamp</a>
       <a href="../index.html#contact" class="btn-primary">Contact Us</a>
@@ -339,6 +357,7 @@
   </div>
 </footer>
 
+<script src="https://unpkg.com/lucide@0.468.0"></script>
+<script>lucide.createIcons();</script>
 </body>
 </html>
-

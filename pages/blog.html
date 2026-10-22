@@ -5,28 +5,31 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Digital Marketing & Creative Insights in Rwanda | Rimba Creative Media</title>
 <link rel="icon" type="image/png" href="../images/rimba-favicon.png">
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../styles/style.css">
 <style>
   /* Blog specific styles */
   .blog-hero {
-    background: linear-gradient(135deg, var(--black) 0%, rgba(10,10,10,.8) 100%);
+    background: linear-gradient(135deg, var(--black) 0%, rgba(0,0,0,.82) 100%);
     padding: 8rem 3rem 5rem;
     margin-top: 80px;
     text-align: center;
   }
 
   .blog-hero h1 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 3.5rem;
-    letter-spacing: 2px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1.9rem, 4vw, 2.9rem);
+    letter-spacing: -0.04em;
+    line-height: 1.12;
     color: var(--white);
     margin-bottom: 1rem;
   }
 
   .blog-hero p {
     font-size: 1.1rem;
-    color: rgba(245,242,238,.7);
+    color: rgba(255,255,255,.7);
     max-width: 600px;
     margin: 0 auto;
   }
@@ -69,7 +72,7 @@
   }
 
   .blog-date {
-    font-family: 'Space Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
     font-size: .75rem;
     color: var(--gold);
     text-transform: uppercase;
@@ -102,7 +105,7 @@
 
   .blog-category {
     display: inline-block;
-    background: rgba(201,168,76,.1);
+    background: rgba(242,201,76,.1);
     color: var(--gold);
     padding: .3rem .7rem;
     border-radius: 8px;
@@ -114,7 +117,7 @@
   .read-more {
     color: var(--gold);
     text-decoration: none;
-    font-family: 'Space Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
     font-size: .8rem;
     font-weight: 600;
     letter-spacing: 1px;
@@ -142,11 +145,11 @@
   }
 
   .blog-featured .blog-card-desc {
-    color: rgba(245,242,238,.8);
+    color: rgba(255,255,255,.8);
   }
 
   .blog-featured .blog-category {
-    background: rgba(201,168,76,.2);
+    background: rgba(242,201,76,.2);
     border-radius: 8px;
   }
 
@@ -156,7 +159,7 @@
     }
 
     .blog-hero h1 {
-      font-size: 2.5rem;
+      font-size: clamp(1.7rem, 6vw, 2.2rem);
     }
 
     .blog-featured {
@@ -215,98 +218,98 @@
     <div class="blog-grid">
       <!-- Featured Post -->
       <div class="blog-card blog-featured">
-        <div class="blog-card-image">📱</div>
+        <div class="blog-card-image"><i class="lucide-icon" data-lucide="smartphone" aria-hidden="true"></i></div>
         <div class="blog-card-content">
           <span class="blog-date">June 2026</span>
           <h3 class="blog-card-title">How to Grow Your Instagram Following: 5 Strategies That Work</h3>
           <p class="blog-card-desc">Social media growth doesn't happen by accident. Learn the proven strategies we use with our clients to build engaged audiences on Instagram, including content planning, posting consistency, and community engagement techniques that drive real results.</p>
           <div class="blog-card-meta">
             <span class="blog-category">Social Media</span>
-            <a href="#" class="read-more">Read More →</a>
+            <span class="read-more">Article coming soon</span>
           </div>
         </div>
       </div>
 
       <!-- Blog Post 1 -->
       <div class="blog-card">
-        <div class="blog-card-image">🎥</div>
+        <div class="blog-card-image"><i class="lucide-icon" data-lucide="video" aria-hidden="true"></i></div>
         <div class="blog-card-content">
           <span class="blog-date">May 2026</span>
           <h3 class="blog-card-title">The Power of Video Marketing in 2026</h3>
           <p class="blog-card-desc">Video content is no longer optional — it's essential. Discover why video marketing converts better than any other format and how you can start creating videos that engage your audience.</p>
           <div class="blog-card-meta">
             <span class="blog-category">Video</span>
-            <a href="#" class="read-more">Read More →</a>
+            <span class="read-more">Article coming soon</span>
           </div>
         </div>
       </div>
 
       <!-- Blog Post 2 -->
       <div class="blog-card">
-        <div class="blog-card-image">📸</div>
+        <div class="blog-card-image"><i class="lucide-icon" data-lucide="camera" aria-hidden="true"></i></div>
         <div class="blog-card-content">
           <span class="blog-date">May 2026</span>
           <h3 class="blog-card-title">Photography Tips for Small Business Owners</h3>
           <p class="blog-card-desc">You don't need expensive equipment to take professional photos. Learn simple lighting, composition, and smartphone photography techniques that make your products and services look amazing.</p>
           <div class="blog-card-meta">
             <span class="blog-category">Photography</span>
-            <a href="#" class="read-more">Read More →</a>
+            <span class="read-more">Article coming soon</span>
           </div>
         </div>
       </div>
 
       <!-- Blog Post 3 -->
       <div class="blog-card">
-        <div class="blog-card-image">📊</div>
+        <div class="blog-card-image"><i class="lucide-icon" data-lucide="bar-chart-3" aria-hidden="true"></i></div>
         <div class="blog-card-content">
           <span class="blog-date">April 2026</span>
           <h3 class="blog-card-title">Content Strategy: Planning Your Marketing Calendar</h3>
           <p class="blog-card-desc">Consistent content is key to building your brand online. We'll walk you through creating a content calendar that keeps your message aligned and your audience engaged throughout the year.</p>
           <div class="blog-card-meta">
             <span class="blog-category">Strategy</span>
-            <a href="#" class="read-more">Read More →</a>
+            <span class="read-more">Article coming soon</span>
           </div>
         </div>
       </div>
 
       <!-- Blog Post 4 -->
       <div class="blog-card">
-        <div class="blog-card-image">🎨</div>
+        <div class="blog-card-image"><i class="lucide-icon" data-lucide="palette" aria-hidden="true"></i></div>
         <div class="blog-card-content">
           <span class="blog-date">April 2026</span>
           <h3 class="blog-card-title">Brand Identity 101: Creating a Visual Style That Works</h3>
           <p class="blog-card-desc">Your visual brand is the first impression customers get. Learn how to choose colors, fonts, and imagery that communicate your brand values and stand out from the competition.</p>
           <div class="blog-card-meta">
             <span class="blog-category">Branding</span>
-            <a href="#" class="read-more">Read More →</a>
+            <span class="read-more">Article coming soon</span>
           </div>
         </div>
       </div>
 
       <!-- Blog Post 5 -->
       <div class="blog-card">
-        <div class="blog-card-image">💡</div>
+        <div class="blog-card-image"><i class="lucide-icon" data-lucide="lightbulb" aria-hidden="true"></i></div>
         <div class="blog-card-content">
           <span class="blog-date">March 2026</span>
           <h3 class="blog-card-title">Getting Started with Paid Advertising: A Beginner's Guide</h3>
           <p class="blog-card-desc">Unsure about Google Ads or Facebook Ads? This guide breaks down the basics, explains targeting options, and shows you how to maximize your ad spend for real business results.</p>
           <div class="blog-card-meta">
             <span class="blog-category">Advertising</span>
-            <a href="#" class="read-more">Read More →</a>
+            <span class="read-more">Article coming soon</span>
           </div>
         </div>
       </div>
 
       <!-- Blog Post 6 -->
       <div class="blog-card">
-        <div class="blog-card-image">🌐</div>
+        <div class="blog-card-image"><i class="lucide-icon" data-lucide="globe" aria-hidden="true"></i></div>
         <div class="blog-card-content">
           <span class="blog-date">March 2026</span>
           <h3 class="blog-card-title">Website Optimization: 5 Ways to Improve Your Site's Performance</h3>
           <p class="blog-card-desc">A slow website loses customers. Learn the top speed and optimization techniques that improve user experience, boost SEO rankings, and increase conversion rates.</p>
           <div class="blog-card-meta">
             <span class="blog-category">Web Design</span>
-            <a href="#" class="read-more">Read More →</a>
+            <span class="read-more">Article coming soon</span>
           </div>
         </div>
       </div>
@@ -315,21 +318,21 @@
 </section>
 
 <!-- NEWSLETTER CTA -->
-<section style="background: var(--black); padding: 4rem 3rem; text-align: center; margin-top: 3rem;">
+<section id="newsletter" style="background: var(--black); padding: 4rem 3rem; text-align: center; margin-top: 3rem;">
   <div class="container" style="max-width: 600px;">
-    <p style="font-family: 'Bebas Neue', sans-serif; font-size: 2rem; color: var(--white); letter-spacing: 1.5px; margin-bottom: 1rem;">STAY UPDATED</p>
-    <p style="color: rgba(245,242,238,.7); margin-bottom: 2rem;">Get creative tips, marketing insights, and exclusive offers delivered to your inbox. No spam, just good content.</p>
+    <p style="font-family: 'Montserrat', sans-serif; font-size: 2rem; color: var(--white); letter-spacing: 1.5px; margin-bottom: 1rem;">STAY UPDATED</p>
+    <p style="color: rgba(255,255,255,.7); margin-bottom: 2rem;">Get creative tips, marketing insights, and exclusive offers delivered to your inbox. No spam, just good content.</p>
     <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
-      <input type="email" id="nlEmail" placeholder="your@email.com" style="flex: 1; padding: .8rem 1rem; border: 1px solid var(--light-gray); border-radius: 8px; font-family: 'DM Sans', sans-serif; font-size: .9rem;">
+      <input type="email" id="nlEmail" placeholder="your@email.com" style="flex: 1; padding: .8rem 1rem; border: 1px solid var(--light-gray); border-radius: 8px; font-family: 'Montserrat', sans-serif; font-size: .9rem;">
       <button class="btn-primary" onclick="subscribeNewsletter()" style="padding: .8rem 2rem;">Subscribe</button>
     </div>
-    <p style="font-size: .8rem; color: rgba(245,242,238,.5);">We respect your privacy. Unsubscribe at any time.</p>
+    <p style="font-size: .8rem; color: rgba(255,255,255,.7);">We respect your privacy. Unsubscribe at any time.</p>
   </div>
 </section>
 
 <!-- BACK TO HOME -->
 <section style="padding: 3rem; text-align: center; background: var(--white);">
-  <a href="index.html" style="display: inline-block; font-family: 'Space Mono', monospace; font-size: .8rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold); padding-bottom: .3rem;">← Back to Home</a>
+  <a href="../index.html" style="display: inline-block; font-family: 'Montserrat', sans-serif; font-size: .8rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold); padding-bottom: .3rem;">← Back to Home</a>
 </section>
 
 <!-- FOOTER -->
@@ -411,6 +414,7 @@
     document.getElementById('nlEmail').value = '';
   }
 </script>
+<script src="https://unpkg.com/lucide@0.468.0"></script>
+<script>lucide.createIcons();</script>
 </body>
 </html>
-

@@ -7,7 +7,7 @@
 <meta name="description" content="Custom website design and development services in Kigali. Fast, mobile-responsive websites that convert visitors into customers. Book your web design consultation today.">
 <meta name="keywords" content="Website Design Kigali, Web Development, Custom Websites, Responsive Web Design, Website Booking, E-commerce, Landing Pages, Web Solutions">
 <link rel="icon" type="image/png" href="../images/rimba-favicon.png">
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../styles/style.css">
 <style>
   .page-hero {
@@ -18,15 +18,16 @@
     margin-top: 80px;
   }
   .page-hero h1 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 3.5rem;
-    letter-spacing: 2px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1.9rem, 4vw, 2.9rem);
+    letter-spacing: -0.04em;
+    line-height: 1.12;
     margin-bottom: 1rem;
   }
   .page-hero p {
     max-width: 760px;
     margin: 0 auto;
-    color: rgba(245,242,238,.8);
+    color: rgba(255,255,255,.8);
     font-size: 1.1rem;
     line-height: 1.8;
   }
@@ -76,10 +77,10 @@
     margin-top: 2rem;
   }
   .data-point {
-    background: rgba(255,255,255,.05);
+    background: rgba(242,201,76,.08);
     padding: 1.3rem;
     border-radius: 15px;
-    border: 1px solid rgba(255,255,255,.08);
+    border: 1px solid rgba(242,201,76,.12);
   }
   .data-point h3 {
     margin: 0;
@@ -88,12 +89,12 @@
   }
   .data-point p {
     margin: .5rem 0 0;
-    color: rgba(245,242,238,.75);
+    color: rgba(255,255,255,.8);
     font-size: .9rem;
   }
   @media (max-width: 768px) {
     .page-hero { padding: 6rem 2rem 4rem; }
-    .page-hero h1 { font-size: 2.8rem; }
+    .page-hero h1 { font-size: clamp(1.7rem, 6vw, 2.2rem); }
   }
 </style>
 </head>
@@ -238,7 +239,7 @@
 <section style="padding: 4rem 3rem; background: var(--black); color: var(--white);">
   <div class="container">
     <h2 class="section-title" style="color: var(--white);">Ready for a website that works?</h2>
-    <p class="section-desc" style="color: rgba(245,242,238,.75);">Book a free website consultation with Rimba Creative Media. Let's discuss your project, timeline, and budget. We'll help you build a website that helps your business grow.</p>
+    <p class="section-desc" style="color: rgba(255,255,255,.8);">Book a free website consultation with Rimba Creative Media. Let's discuss your project, timeline, and budget. We'll help you build a website that helps your business grow.</p>
     <div style="margin-top: 2rem; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
       <a href="../index.html#contact" class="btn-primary">Book Now</a>
       <!-- <a href="portfolio.html" class="btn-outline">View Examples</a> -->
@@ -309,7 +310,7 @@
     document.getElementById('mobileMenu').classList.remove('open');
   }
 </script>
-
+<script src="https://unpkg.com/lucide@0.468.0"></script>
+<script>lucide.createIcons();</script>
 </body>
 </html>
-
