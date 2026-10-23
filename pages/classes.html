@@ -11,8 +11,8 @@
 <link rel="stylesheet" href="../styles/style.css">
 <style>
   .classes-hero {
-    background: linear-gradient(135deg, var(--black) 0%, rgba(0,0,0,.82) 100%);
-    padding: 8rem 3rem 5rem;
+    background: var(--black);
+    padding: 6rem 3rem 4rem;
     margin-top: 80px;
     text-align: center;
   }
@@ -31,6 +31,11 @@
     color: rgba(255,255,255,.7);
     max-width: 700px;
     margin: 0 auto;
+  }
+
+  .classes-hero .btn-primary {
+    display: inline-block;
+    margin-top: 1.5rem;
   }
 
   .new-intakes-banner {
@@ -345,6 +350,10 @@
   }
 
   @media (max-width: 768px) {
+    .classes-hero {
+      padding: 5rem 1.5rem 3rem;
+    }
+
     .classes-hero h1 {
       font-size: clamp(1.7rem, 6vw, 2.2rem);
     }
@@ -407,11 +416,8 @@
 <!-- HERO -->
 <section class="classes-hero">
   <h1>Learn Creative Skills</h1>
-  <p>Practical, 3-month certificate courses in photography, videography, and web development. Taught by professionals. No experience needed. Start your creative journey today.</p> <br><br><br><br>
-  <div styles="width: 100px;">
-            <a href="#apply" class="btn-primary" onclick="selectClass('Web Development'); document.getElementById('appForm').scrollIntoView({behavior: 'smooth'});">Apply Now</a>
-          </div>
-  <br><br><br><br><br><br><br><br><br>
+  <p>Practical, 3-month certificate courses in photography, videography, and web development. Taught by professionals. No experience needed. Start your creative journey today.</p>
+  <a href="#apply" class="btn-primary" onclick="selectClass('Web Development'); document.getElementById('appForm').scrollIntoView({behavior: 'smooth'});">Apply Now</a>
 </section>
 
 <!-- NEW INTAKES -->
@@ -675,7 +681,7 @@
       <h4>Contact</h4>
       <ul>
         <li>KIGALI, RWANDA</li>
-        <li>KG 440 ST</li>
+        <li>25 KG 669 St, Kigali</li>
         <li><a href="tel:+250786134003">+250 786 134 003</a></li>
         <li><a href="mailto:rimbacreativemedia@gmail.com">rimbacreativemedia@gmail.com</a></li>
       </ul>

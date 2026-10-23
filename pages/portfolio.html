@@ -15,16 +15,6 @@
   position: relative;
   overflow: hidden;
 }
-.portfolio-hero::before {
-  content: '';
-  position: absolute; inset: 0;
-  background-image: repeating-linear-gradient(0deg, transparent, transparent 79px, rgba(242,201,76,.04) 80px);
-}
-.portfolio-hero-grain {
-  position: absolute; inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-  opacity: .4;
-}
 .portfolio-hero-content { position: relative; z-index: 2; }
 .portfolio-hero h1 {
   font-family: 'Montserrat', sans-serif;
@@ -95,7 +85,8 @@
 }
 .gsec-icon {
   font-size: 2rem; width: 56px; height: 56px;
-  background: rgba(242,201,76,.08); border: 1px solid rgba(242,201,76,.2);
+  color: var(--gold);
+  background: rgba(242,201,76,.12); border: 1px solid rgba(242,201,76,.3);
   display: flex; align-items: center; justify-content: center; flex-shrink: 0;
 }
 
@@ -103,13 +94,6 @@
 .gallery-grid {
   columns: 3;
   column-gap: 1rem;
-}
-.gallery-empty {
-  column-span: all;
-  padding: 2rem;
-  border: 1px solid rgba(255,255,255,.1);
-  color: rgba(255,255,255,.6);
-  text-align: center;
 }
 .gallery-item {
   break-inside: avoid;
@@ -125,19 +109,6 @@
   display: block;
   transition: transform .45s ease;
   object-fit: cover;
-}
-.gallery-item-unavailable {
-  min-height: 180px;
-  cursor: default;
-}
-.gallery-item-unavailable::after {
-  content: 'Photo unavailable';
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  color: rgba(255,255,255,.6);
-  font-size: .85rem;
 }
 .gallery-item:hover img { transform: scale(1.04); }
 .gallery-item-hover {
@@ -259,7 +230,6 @@
 
 <!-- HERO -->
 <div class="portfolio-hero">
-  <div class="portfolio-hero-grain"></div>
   <div class="portfolio-hero-content">
     <p class="section-label" style="color:var(--gold);font-family:'Montserrat',sans-serif;font-size:.7rem;letter-spacing:4px;text-transform:uppercase;margin-bottom:1rem;">Our Work</p>
     <h1>OUR <span>PORTFOLIO</span></h1>
@@ -357,7 +327,7 @@
       <h4>Contact</h4>
       <ul>
         <li>KIGALI, RWANDA</li>
-        <li>KG 440 ST</li>
+        <li>25 KG 669 St, Kigali</li>
         <li><a href="tel:+250786134003">+250 786 134 003</a></li>
         <li><a href="mailto:rimbacreativemedia@gmail.com">rimbacreativemedia@gmail.com</a></li>
       </ul>
@@ -434,32 +404,11 @@ const photoCollections = {
       '2(5).jpg',
       '2(6).jpg',
       '3(1).jpg',
-      '3(2).jpg',
-      'DSC_0090.jpg',
-      'DSC_0093.jpg',
-      'DSC_0095.jpg',
-      'DSC_0097.jpg',
-      'DSC_0100.jpg',
-      'DSC_0115.jpg',
-      'DSC_0117.jpg',
       'DSC_0122.jpg',
-      'DSC_0125.jpg',
-      'DSC_0127.jpg',
-      'DSC_0128.jpg',
-      'DSC_0131.jpg',
-      'DSC_0133.jpg',
-      'DSC_0135.jpg',
-      'DSC_0138.jpg',
-      'DSC_0141.jpg',
-      'DSC_0143.jpg',
-      'DSC_0145.jpg',
       'DSC_0147.jpg',
       'DSC_0150.jpg',
       'DSC_0153.jpg',
       'DSC_0155.jpg',
-      'DSC_0160.jpg',
-      'DSC_0162.jpg',
-      'DSC_0167.jpg',
       'z(1).jpg',
       'z(2).jpg',
       'z(3).jpg',
@@ -471,7 +420,7 @@ const categoryLabels = {
   outdoor: 'Outdoor Photos',
   events: 'Events & Weddings',
 };
-const photos = Object.entries(photoCollections).flatMap(([cat, collection]) =>
+let photos = Object.entries(photoCollections).flatMap(([cat, collection]) =>
   collection.files.map((file, index) => ({
     cat,
     src: `../images/${collection.folder}/${encodeURIComponent(file)}`,
@@ -484,7 +433,11 @@ const grids = {
   outdoor: document.getElementById('grid-outdoor'),
   events: document.getElementById('grid-events'),
 };
-
+const sections = {
+  studio:  document.getElementById('section-studio'),
+  outdoor: document.getElementById('section-outdoor'),
+  events:  document.getElementById('section-events'),
+};
 const counts = { studio: 0, outdoor: 0, events: 0 };
 
 photos.forEach((p, i) => {
@@ -503,15 +456,23 @@ photos.forEach((p, i) => {
   image.decoding = 'async';
   image.addEventListener('error', () => {
     console.error(`Portfolio photo failed to load: ${p.src}`);
-    item.classList.add('gallery-item-unavailable');
-    image.remove();
+    item.remove();
+    photos = photos.filter(photo => photo !== p);
+    counts[p.cat]--;
+    const countEl = document.getElementById('count-' + p.cat);
+    if (countEl) countEl.textContent = counts[p.cat] + ' photo' + (counts[p.cat] !== 1 ? 's' : '');
+    if (counts[p.cat] === 0) {
+      sections[p.cat].hidden = true;
+      document.querySelector(`.filter-btn[data-filter="${p.cat}"]`).hidden = true;
+    }
   }, { once: true });
   const hover = document.createElement('div');
   hover.className = 'gallery-item-hover';
   hover.innerHTML = '<span><i class="lucide-icon" data-lucide="search" aria-hidden="true"></i></span><p>View Photo</p>';
   item.append(image, hover);
   item.addEventListener('click', () => {
-    if (image.isConnected) openLightbox(i);
+    const photoIndex = photos.indexOf(p);
+    if (photoIndex !== -1) openLightbox(photoIndex);
   });
   grids[p.cat].appendChild(item);
 });
@@ -520,26 +481,19 @@ photos.forEach((p, i) => {
 Object.keys(counts).forEach(k => {
   const el = document.getElementById('count-' + k);
   if (el) el.textContent = counts[k] + ' photo' + (counts[k] !== 1 ? 's' : '');
-  if (counts[k] === 0 && grids[k]) {
-    const emptyState = document.createElement('p');
-    emptyState.className = 'gallery-empty';
-    emptyState.textContent = `${categoryLabels[k]} are coming soon.`;
-    grids[k].appendChild(emptyState);
+  if (counts[k] === 0) {
+    document.getElementById('section-' + k).hidden = true;
+    document.querySelector(`.filter-btn[data-filter="${k}"]`).hidden = true;
   }
 });
 
 // ── Filter logic ─────────────────────────────────────────────────────────────
 const filterBtns = document.querySelectorAll('.filter-btn');
-const sections = {
-  studio:  document.getElementById('section-studio'),
-  outdoor: document.getElementById('section-outdoor'),
-  events:  document.getElementById('section-events'),
-};
 
 function applyFilter(cat) {
   filterBtns.forEach(b => b.classList.toggle('active', b.dataset.filter === cat));
   Object.keys(sections).forEach(key => {
-    sections[key].style.display = (cat === 'all' || cat === key) ? 'block' : 'none';
+    sections[key].style.display = counts[key] > 0 && (cat === 'all' || cat === key) ? 'block' : 'none';
   });
 }
 

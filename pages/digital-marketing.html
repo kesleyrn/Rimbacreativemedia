@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="../styles/style.css">
 <style>
   .page-hero {
-    background: linear-gradient(135deg, rgba(0,0,0,.95), rgba(10,10,10,.75));
+    background: var(--black);
     padding: 8rem 3rem 5rem;
     text-align: center;
     color: var(--white);
@@ -21,10 +21,13 @@
   }
   .page-hero h1 {
     font-family: 'Montserrat', sans-serif;
-    font-size: clamp(1.9rem, 4vw, 2.9rem);
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
     letter-spacing: -0.04em;
     line-height: 1.12;
     margin-bottom: 1rem;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .page-hero p {
     max-width: 760px;
@@ -56,6 +59,18 @@
   .process-card h3 {
     margin-top: 0;
     color: var(--black);
+  }
+  .marketing-icon {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 1rem;
+    background: var(--black);
+    color: var(--gold);
+    border: 1px solid rgba(242,201,76,.35);
+    border-radius: 10px;
+    font-size: 1.35rem;
   }
   .marketing-card p,
   .process-card p {
@@ -140,14 +155,13 @@
 <section class="page-hero">
   <div class="container">
     <!-- <p>Digital Marketing Services in Kigali</p> -->
-        <h1 class="section-label">Rimba creatives digital marketing Agency</h1><br>
-    <p>Rimba Creative Media delivers high-performance in digital marketing and brand growth services for Your business. We specialize in SEO, content strategy, website conversion,
-    Google Ads and social media advertising in Kigali and beyond.</p><br><br>
+    <h1>Rimba Creative Media: Digital Marketing Agency</h1>
+    <p>Rimba Creative Media delivers high-performance digital marketing and brand-growth services for your business. We specialize in SEO, content strategy, website conversion optimization, Google Ads, and social media advertising in Kigali and beyond.</p>
     <div class="hero-btns">
-      <a href="./Bootcamp.html" class="btn-primary">Start Your Campaign</a>
-      <a href="#creative-work" class="btn-outline">See Creative Work</a>
+      <a href="./Bootcamp.html" class="btn-primary">Start Your Campaign <i class="lucide-icon" data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+      <a href="#creative-work" class="btn-outline">See Creative Work <i class="lucide-icon" data-lucide="images" aria-hidden="true"></i></a>
     </div>
-  </div><br><br><br>
+  </div>
 </section> 
 
 <section style="padding: 4rem 3rem; background: var(--cream);">
@@ -158,26 +172,32 @@
     <p class="section-desc">We focus on marketing keywords naturally throughout the page and across your website so search engines understand your services without showing them as an obvious list.</p>
     <div class="marketing-grid">
       <div class="marketing-card">
+        <div class="marketing-icon"><i class="lucide-icon" data-lucide="share-2" aria-hidden="true"></i></div>
         <h3>Social Media Marketing</h3>
         <p>We grow your business online with creative strategies for Instagram, Facebook, TikTok and specific one for your business —  posting engaging creative contents, running targeted ads, and turning followers into paying customers.</p>
       </div>
       <div class="marketing-card">
+        <div class="marketing-icon"><i class="lucide-icon" data-lucide="search" aria-hidden="true"></i></div>
         <h3>Search Engine Optimization</h3>
         <p>Local SEO on-page optimization for your website so your business appears in Google search, drives organic traffic, and ranks higher for keywords like digital marketing, advertising, and brand services.</p>
       </div>
       <div class="marketing-card">
+        <div class="marketing-icon"><i class="lucide-icon" data-lucide="mouse-pointer-click" aria-hidden="true"></i></div>
         <h3>Paid Advertising</h3>
         <p>We run and manage Ad campaigns on Google, Facebook, Instagram  for well built conversions. We optimize every click to reduce cost-per-lead and increase sales.</p>
       </div>
       <div class="marketing-card">
+        <div class="marketing-icon"><i class="lucide-icon" data-lucide="calendar-days" aria-hidden="true"></i></div>
         <h3>Content Strategy</h3>
         <p>From video content to blog posts and social media calendars, we plan the right creative contents for desired audience Target, we publish consistently and measure results so your brand speaks with clarity.</p>
       </div>
       <div class="marketing-card">
+        <div class="marketing-icon"><i class="lucide-icon" data-lucide="clapperboard" aria-hidden="true"></i></div>
         <h3>Video & Photography</h3>
         <p>Well produced High-impactful photos and video ads, reels and brand visuals that perform across social media and digital advertising campaigns.</p>
       </div>
       <div class="marketing-card">
+        <div class="marketing-icon"><i class="lucide-icon" data-lucide="bar-chart-3" aria-hidden="true"></i></div>
         <h3>Website Conversion</h3>
         <p>Optimized landing pages, sales funnels, and UX improvements that turn website visitors into leads to long-term clients.</p>
       </div>
@@ -335,7 +355,7 @@
       <h4>Contact</h4>
       <ul>
         <li>KIGALI, RWANDA</li>
-        <li>KG 440 ST</li>
+        <li>25 KG 669 St, Kigali</li>
         <li><a href="tel:+250786134003">+250 786 134 003</a></li>
         <li><a href="mailto:rimbacreativemedia@gmail.com">rimbacreativemedia@gmail.com</a></li>
       </ul>

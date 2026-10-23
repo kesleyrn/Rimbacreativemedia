@@ -93,10 +93,11 @@ nav {
 
 .logo-text {
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.15rem;
-  letter-spacing: 2px;
+  font-size: 1.2rem;
+  letter-spacing: 0.8px;
   color: var(--black);
   line-height: 1.1;
+  white-space: nowrap;
 }
 .logo-sub {
   font-family: 'Montserrat', sans-serif;
@@ -151,16 +152,7 @@ nav {
 }
 .hero-bg {
   position: absolute; inset: 0;
-  background: radial-gradient(ellipse at 60% 40%, #1a1a1a 0%, #000000 70%);
-}
-.hero-grain {
-  position: absolute; inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-  opacity: .4;
-}
-.hero-lines {
-  position: absolute; inset: 0;
-  background-image: repeating-linear-gradient(0deg, transparent, transparent 79px, rgba(242,201,76,.04) 80px);
+  background: var(--black);
 }
 .hero-content {
   position: relative; z-index: 2;
@@ -334,7 +326,8 @@ section { padding: 6rem 3rem; }
 }
 .section-title {
   font-family: 'Montserrat', sans-serif;
-  font-size: clamp(1.8rem, 4vw, 3.25rem);
+  font-size: clamp(1.55rem, 3vw, 2.3rem);
+  max-width: 640px;
   line-height: 1.12;
   letter-spacing: -0.035em;
   margin-bottom: 1rem;
@@ -844,7 +837,7 @@ footer {
   gap: 3rem;
   margin-bottom: 3rem;
 }
-.footer-brand .logo-text { font-size: 1.3rem; margin-top: .5rem; }
+.footer-brand .logo-text { max-width: 200px; font-size: 1rem; letter-spacing: 1px; margin-top: .5rem; }
 .footer-brand p {
   margin-top: .8rem;
   font-size: .85rem; color: rgba(255,255,255,.4);
@@ -997,7 +990,7 @@ footer {
 @media (max-width: 768px) {
   nav { padding: 0.8rem 1.2rem; }
   .logo-circle { width: 40px; height: 40px; }
-  .logo-text { font-size: 1rem; }
+  .logo-text { font-size: 1.1rem; }
   .logo-sub { font-size: 0.5rem; }
   section { padding: 2.5rem 1.2rem; }
   #home { min-height: 80vh; padding-top: 80px; }
@@ -1068,7 +1061,7 @@ footer {
 @media (max-width: 600px) {
   nav { padding: 0.7rem 1rem; }
   .logo-circle { width: 36px; height: 36px; }
-  .logo-text { font-size: 0.9rem; letter-spacing: 1.5px; }
+  .logo-text { font-size: 1.05rem; letter-spacing: 0.6px; }
   .logo-sub { font-size: 0.45rem; letter-spacing: 2.5px; }
   section { padding: 2rem 1rem; }
   #home { min-height: 75vh; padding-top: 70px; }
@@ -1121,9 +1114,12 @@ footer {
   .contact-info > p { font-size: 0.8rem; margin-bottom: 1.5rem; }
   .contact-details { gap: 1.2rem; }
   .contact-detail { flex-direction: column; gap: 0.6rem; }
+  .contact-details { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+  .contact-detail { flex-direction: row; align-items: flex-start; gap: 0.6rem; min-width: 0; }
   .contact-detail-icon { width: 32px; height: 32px; font-size: 0.85rem; }
+  .contact-detail-text { min-width: 0; }
   .contact-detail-text h4 { font-size: 0.7rem; margin-bottom: 0.15rem; }
-  .contact-detail-text p, .contact-detail-text a { font-size: 0.8rem; }
+  .contact-detail-text p, .contact-detail-text a { font-size: 0.8rem; overflow-wrap: anywhere; }
   .socials { gap: 0.6rem; margin-top: 1.5rem; }
   .social-btn { width: 36px; height: 36px; font-size: 0.9rem; }
   .contact-form-wrap { padding: 1.5rem 1rem; }
@@ -1158,7 +1154,7 @@ footer {
 @media (max-width: 480px) {
   nav { padding: 0.6rem 0.8rem; }
   .logo-circle { width: 32px; height: 32px; }
-  .logo-text { font-size: 0.8rem; letter-spacing: 1.2px; }
+  .logo-text { font-size: 1rem; letter-spacing: 0.4px; }
   .logo-sub { font-size: 0.4rem; }
   section { padding: 1.5rem 0.8rem; }
   #home { min-height: 70vh; }
