@@ -55,6 +55,24 @@
     margin-top: 0;
     color: var(--black);
   }
+  .web-card-icon,
+  .process-card-icon {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(242,201,76,.35);
+    border-radius: 12px;
+    background: rgba(242,201,76,.14);
+    color: #9c7600;
+    font-size: 1.35rem;
+  }
+  .web-card-icon .lucide-icon,
+  .process-card-icon .lucide-icon {
+    width: 1.35em;
+    height: 1.35em;
+  }
   .web-card p,
   .process-card p {
     color: var(--gray);
@@ -63,7 +81,7 @@
   .data-panel {
     background: var(--black);
     color: var(--white);
-    padding: 3rem;
+    padding: 1rem;
     border-radius: 15px;
     text-align: center;
   }
@@ -156,26 +174,32 @@
     <p class="section-desc">Our website design services include SEO optimization, fast loading times, mobile-first design, and integration with your business tools and payment systems.</p>
     <div class="web-grid">
       <div class="web-card">
+        <div class="web-card-icon"><i class="lucide-icon" data-lucide="building-2" aria-hidden="true"></i></div>
         <h3>Business Websites</h3>
         <p>Professional business websites that showcase your services, build credibility, and help customers find you on Google with SEO-optimized design.</p>
       </div>
       <div class="web-card">
+        <div class="web-card-icon"><i class="lucide-icon" data-lucide="shopping-bag" aria-hidden="true"></i></div>
         <h3>E-Commerce Stores</h3>
         <p>Fully functional online stores with payment processing, inventory management, and customer accounts. Sell online and grow your business 24/7.</p>
       </div>
       <div class="web-card">
+        <div class="web-card-icon"><i class="lucide-icon" data-lucide="mouse-pointer-click" aria-hidden="true"></i></div>
         <h3>Landing Pages</h3>
         <p>High-converting landing pages designed to capture leads, promote campaigns, or drive sales. Every element is optimized for results.</p>
       </div>
       <div class="web-card">
+        <div class="web-card-icon"><i class="lucide-icon" data-lucide="images" aria-hidden="true"></i></div>
         <h3>Portfolio & Creative Sites</h3>
         <p>Beautiful portfolio websites for designers, photographers, creatives, and agencies to showcase work and attract clients.</p>
       </div>
       <div class="web-card">
+        <div class="web-card-icon"><i class="lucide-icon" data-lucide="smartphone" aria-hidden="true"></i></div>
         <h3>Responsive Mobile Design</h3>
         <p>All our websites are built mobile-first and fully responsive. Your site looks perfect on phones, tablets, and desktops.</p>
       </div>
       <div class="web-card">
+        <div class="web-card-icon"><i class="lucide-icon" data-lucide="gauge" aria-hidden="true"></i></div>
         <h3>Fast & SEO-Ready</h3>
         <p>Fast-loading websites optimized for search engines. We focus on performance, accessibility, and rankings so customers can find you.</p>
       </div>
@@ -217,18 +241,22 @@
     <p class="section-desc">We follow a proven process to create websites that work. From discovery to launch, every step is designed for your success.</p>
     <div class="process-grid">
       <div class="process-card">
+        <div class="process-card-icon"><i class="lucide-icon" data-lucide="clipboard-list" aria-hidden="true"></i></div>
         <h3>1. Discovery & Planning</h3>
         <p>We learn about your business, goals, target audience, and competition. Then we create a detailed website plan and design mockup.</p>
       </div>
       <div class="process-card">
+        <div class="process-card-icon"><i class="lucide-icon" data-lucide="pencil-ruler" aria-hidden="true"></i></div>
         <h3>2. Design & Wireframes</h3>
         <p>Beautiful, functional design that matches your brand. We create mockups for desktop, tablet, and mobile so you see exactly what you're getting.</p>
       </div>
       <div class="process-card">
+        <div class="process-card-icon"><i class="lucide-icon" data-lucide="code-2" aria-hidden="true"></i></div>
         <h3>3. Development & Build</h3>
         <p>We code your website using the latest technologies for speed, security, and SEO. Every line of code is tested and optimized.</p>
       </div>
       <div class="process-card">
+        <div class="process-card-icon"><i class="lucide-icon" data-lucide="rocket" aria-hidden="true"></i></div>
         <h3>4. Testing & Launch</h3>
         <p>Thorough testing on all browsers and devices. We then deploy your site to a fast, secure server and optimize it for search engines.</p>
       </div>
